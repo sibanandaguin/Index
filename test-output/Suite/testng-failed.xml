@@ -5,13 +5,14 @@
     <classes>
       <class name="userTest.CategoryModuleTest">
         <methods>
-          <include name="Logout"/>
-          <include name="lunchBrowser"/>
+          <include name="generateReport"/>
+          <include name="register"/>
+          <include name="primarySetup"/>
           <include name="closeBrowser"/>
-          <include name="startReport"/>
-          <include name="TC_4"/>
-          <include name="login"/>
-          <include name="TC_3"/>
+          <include name="captureStatus"/>
+          <include name="A_Catagory_3" invocation-numbers="0"/>
+          <include name="afterSuit"/>
+          <include name="setUp"/>
         </methods>
       </class> <!-- userTest.CategoryModuleTest -->
     </classes>

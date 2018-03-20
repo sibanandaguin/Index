@@ -24,7 +24,7 @@ public class Utilitymethods extends BaseTest
 	}
 	
 	//static method to enter value in text box
-	public static void EnterText(WebElement element,String value)
+	public static void enterText(WebElement element,String value)
 	{
 		element.clear();
 		element.sendKeys(value);

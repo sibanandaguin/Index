@@ -221,3 +221,66 @@
 2018-03-08 01:17:49 [main] INFO  AppLogger:92 - A_2 test is Passed.
 2018-03-08 01:18:00 [main] INFO  AppLogger:126 - ================LogEnded=================
 2018-03-08 01:18:04 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-21 00:43:19 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-21 00:43:28 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-21 00:43:31 [main] INFO  AppLogger:71 - Add Category button is displayed.
+2018-03-21 00:43:31 [main] INFO  AppLogger:75 - Add Item button is displayed.
+2018-03-21 00:43:31 [main] INFO  AppLogger:79 - Search Category box is displayed.
+2018-03-21 00:43:31 [main] INFO  AppLogger:83 - Category grid is displayed.
+2018-03-21 00:46:02 [main] INFO  AppLogger:100 - A_Catagory_1 test is FAiled.
+2018-03-21 00:46:04 [main] INFO  AppLogger:98 - New Category closed button is displayed.
+2018-03-21 00:46:04 [main] INFO  AppLogger:103 - Category name label is displayed.
+2018-03-21 00:46:04 [main] INFO  AppLogger:107 - Category name field is displayed.
+2018-03-21 00:46:05 [main] INFO  AppLogger:111 - Add button is displayed in New CategoryWindow.
+2018-03-21 00:46:05 [main] INFO  AppLogger:92 - A_Catagory_2 test is Passed.
+2018-03-21 00:47:08 [main] INFO  AppLogger:100 - A_Catagory_3 test is FAiled.
+2018-03-21 00:47:18 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-21 00:47:21 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-21 00:54:09 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-21 00:54:19 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-21 00:54:22 [main] INFO  AppLogger:71 - Add Category button is displayed.
+2018-03-21 00:54:22 [main] INFO  AppLogger:75 - Add Item button is displayed.
+2018-03-21 00:54:22 [main] INFO  AppLogger:79 - Search Category box is displayed.
+2018-03-21 00:54:22 [main] INFO  AppLogger:83 - Category grid is displayed.
+2018-03-21 00:56:53 [main] INFO  AppLogger:100 - A_Catagory_1 test is FAiled.
+2018-03-21 00:56:56 [main] INFO  AppLogger:98 - New Category closed button is displayed.
+2018-03-21 00:56:56 [main] INFO  AppLogger:103 - Category name label is displayed.
+2018-03-21 00:56:56 [main] INFO  AppLogger:107 - Category name field is displayed.
+2018-03-21 00:56:56 [main] INFO  AppLogger:111 - Add button is displayed in New CategoryWindow.
+2018-03-21 00:56:56 [main] INFO  AppLogger:92 - A_Catagory_2 test is Passed.
+2018-03-21 00:57:59 [main] INFO  AppLogger:100 - A_Catagory_3 test is FAiled.
+2018-03-21 00:58:10 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-21 00:58:13 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-21 00:58:41 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-21 00:58:52 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-21 00:58:55 [main] INFO  AppLogger:71 - Add Category button is displayed.
+2018-03-21 00:58:55 [main] INFO  AppLogger:75 - Add Item button is displayed.
+2018-03-21 00:58:55 [main] INFO  AppLogger:79 - Search Category box is displayed.
+2018-03-21 00:58:55 [main] INFO  AppLogger:83 - Category grid is displayed.
+2018-03-21 01:01:26 [main] INFO  AppLogger:100 - A_Catagory_1 test is FAiled.
+2018-03-21 01:01:29 [main] INFO  AppLogger:98 - New Category closed button is displayed.
+2018-03-21 01:01:29 [main] INFO  AppLogger:103 - Category name label is displayed.
+2018-03-21 01:01:29 [main] INFO  AppLogger:107 - Category name field is displayed.
+2018-03-21 01:01:29 [main] INFO  AppLogger:111 - Add button is displayed in New CategoryWindow.
+2018-03-21 01:01:29 [main] INFO  AppLogger:92 - A_Catagory_2 test is Passed.
+2018-03-21 01:01:39 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-21 01:01:54 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-21 01:02:32 [main] INFO  AppLogger:100 - A_Catagory_3 test is FAiled.
+2018-03-21 01:02:43 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-21 01:02:46 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-21 01:02:58 [main] INFO  AppLogger:100 - A_Catagory_3 test is FAiled.
+2018-03-21 01:03:09 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-21 01:03:12 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-21 01:11:25 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-21 01:11:46 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-21 01:11:53 [main] INFO  AppLogger:92 - A_Catagory_3 test is Passed.
+2018-03-21 01:12:03 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-21 01:12:05 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-21 01:12:09 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-21 02:25:26 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-21 02:25:46 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-21 02:25:51 [main] INFO  AppLogger:145 - Category edit field is displayed.
+2018-03-21 02:25:52 [main] INFO  AppLogger:92 - A_Catagory_4 test is Passed.
+2018-03-21 02:26:03 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-21 02:26:04 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-21 02:26:07 [main] INFO  AppLogger:134 - Email sent Successfully

@@ -1,12 +1,14 @@
 package pageObjectRepository;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import genericLib.AppLogger;
 import genericLib.Utilitymethods;
 import userTest.BaseTest;
-public class CategoryPage extends BaseTest{
+import userTest.CategoryModuleTest;
+public class CategoryPage extends CategoryModuleTest{
 	
 	
 	//Constructor
@@ -21,6 +23,15 @@ public class CategoryPage extends BaseTest{
 	
 	@FindBy(xpath="//button[@ng-click='catCtrl.addItem()']")
 	private WebElement AddItemButton;
+	
+	@FindBy(xpath="//button[text()='Add']")
+	private WebElement NewCategoryAddButton;
+	
+	@FindBy(xpath="//div[text()='category added']")
+	private WebElement AddCategorySuccessBanner;
+	
+	@FindBy(xpath=("//button[text()='Update']"))
+	private WebElement CategoryEditdialogUpdate;
 	
 	@FindBy(xpath="//b[text()='( Deleting a category will delete the item from stock.Please be careful before deleting a category )']")
 	private WebElement InfotextforDeleteCategory;
@@ -109,7 +120,7 @@ public class CategoryPage extends BaseTest{
 		}else 
 		{
 			AppLogger.logger.info("Add button is disabled when Category field is empty.");
-			Utilitymethods.EnterText(CategoryNameField, categoryName);
+			Utilitymethods.enterText(CategoryNameField, categoryName);
 			if(AddButtonInNewCategoryDialog.isEnabled())
 			{
 				AppLogger.logger.info("Add button is enabled when Category name is given .");
@@ -118,8 +129,31 @@ public class CategoryPage extends BaseTest{
 		Utilitymethods.elementclick(NewCategoryDialogboxCloser);
 
 	}
+	public String AddcategoryFeature(String categoryName)
+	{
+		Utilitymethods.elementclick(AddCategoryButton);
+		Utilitymethods.enterText(CategoryNameField,categoryName);
+		Utilitymethods.elementclick(NewCategoryAddButton);
+		return AddCategorySuccessBanner.getText();
+		
+	}
+	public void  EditCategoryfeature(String EditCategoryname,String categoryName)
+	{
+		driver.findElement(By.xpath("//td[text()='"+EditCategoryname+"']/following-sibling::td/a/i[@class='fa fa-edit text-success']")).click();
+		if(CategoryEditdialogUpdate.isDisplayed())
+		{
+			AppLogger.logger.info("Category edit field is displayed.");
+		}else {AppLogger.logger.info("Category edit filed is not displayed.");
+		}
+		CategoryNameField.clear();
+		Utilitymethods.enterText(CategoryNameField,categoryName);
+		CategoryEditdialogUpdate.click();
+		
+		}
+	}
 	
 	
 	
 	
-}
+	
+

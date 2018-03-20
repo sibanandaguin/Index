@@ -15,7 +15,7 @@ public class ScreenshotClass extends BaseTest {
 		try{
 			TakesScreenshot ts=(TakesScreenshot)driver;
 			File Source = ts.getScreenshotAs(OutputType.FILE);
-			String dest="D:\\IndexErp\\IndexErpAutomation\\src\\main\\resources\\Screenshots\\"+ScreenShotName+".png";
+			String dest="C:\\kalinga selenium\\indexerp\\src\\main\\resources\\Screenshots\\"+ScreenShotName+".png";
 			File destination = new File(dest);
 			FileUtils.copyFile(Source, destination);
 			System.out.println("Screen shot taken");
