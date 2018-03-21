@@ -10,7 +10,7 @@
           <include name="primarySetup"/>
           <include name="closeBrowser"/>
           <include name="captureStatus"/>
-          <include name="A_Catagory_3" invocation-numbers="0"/>
+          <include name="A_Catagory_5" invocation-numbers="0"/>
           <include name="afterSuit"/>
           <include name="setUp"/>
         </methods>

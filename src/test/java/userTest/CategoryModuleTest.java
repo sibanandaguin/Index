@@ -74,7 +74,28 @@ public class CategoryModuleTest extends BaseTest{
 		CategoryPage category=new CategoryPage();
 		category.EditCategoryfeature(data.get("EditCategoryname"),data.get("Categoryname"));
 	}
-	
+	@DataProvider
+	public Object[][] A_Catagory_5Testdata()
+	{
+		return DataUtil.getData("A_Catagory_5","Category", xls);
 	}
+	@Test(dataProvider="A_Catagory_5Testdata")
+		public void A_Catagory_5(Hashtable<String,String>data) throws Exception
+		{
+			if(data.get("RunMode").equals("N"))
+			{
+				AppLogger.logger.info("A_Catagory_5 test skipped");
+				throw new SkipException("Skipping the Test");
+			}
+			CommonPage common=new CommonPage();
+			common.clickCategorySpan();
+			CategoryPage category=new CategoryPage();
+			category.DeleteCategoryfeature(data.get("Categoryname"));
+		}
+	}
+
+	
+
+
 
 

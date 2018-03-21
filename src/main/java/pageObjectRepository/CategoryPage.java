@@ -39,6 +39,21 @@ public class CategoryPage extends CategoryModuleTest{
 	@FindBy(xpath="//input[@placeholder='Search']")
 	private WebElement SearchCategoryBox;
 	
+	@FindBy(xpath="//b[text()='Confirm']")
+	private WebElement DeleteConfirmHeader;
+	
+	@FindBy(xpath="//b[text()='Do you want to Delete ?']")
+	private WebElement Deletedialogboxmessage;
+	
+	@FindBy(xpath="//button[text()='Cancel']")
+	private WebElement CancelButton;
+	
+	@FindBy(xpath="//button[text()='Ok']")
+	private WebElement OKButton;
+	
+	@FindBy(xpath="//div[text()='Category Deleted']")
+	private WebElement DeleteSuccessBanner;
+	
 	@FindBy(xpath="//tr[@class='row warning']//th[text()='Category']")
 	private WebElement CategoryColumn;
 	
@@ -48,7 +63,7 @@ public class CategoryPage extends CategoryModuleTest{
 	@FindBy(xpath="//tr[@class='row warning']//th[text()='Action']")
 	private WebElement ActionsColumn;
 	
-	@FindBy(xpath="//span[Contains(text(),'CATEGORY')]")
+	@FindBy(xpath="//span[contains(text(),'CATEGORY')]")
 	private WebElement CATEGORYPageMarker;
 	
 	@FindBy(xpath="//b[text()='New category']")
@@ -86,7 +101,6 @@ public class CategoryPage extends CategoryModuleTest{
 		{
 			AppLogger.logger.info("Category grid is displayed.");
 		}else {AppLogger.logger.info("Category grid is not displayed.");}
-		Utilitymethods.elementclick(NewCategoryDialogboxCloser);
 		if(CATEGORYPageMarker.isDisplayed()) 
 		{
 			AppLogger.logger.info("Category page marker grid is displayed.");
@@ -149,7 +163,74 @@ public class CategoryPage extends CategoryModuleTest{
 		Utilitymethods.enterText(CategoryNameField,categoryName);
 		CategoryEditdialogUpdate.click();
 		
+	}
+	public void DeleteCategoryfeature(String categoryName)
+	{
+		driver.findElement(By.xpath("//td[text()='"+categoryName+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']")).click();
+		if(DeleteConfirmHeader.isDisplayed())
+		{
+			AppLogger.logger.info("Delete popup displayed");
 		}
+		else
+		{
+			AppLogger.logger.info("Delete popup not displayed");
+		}
+		if(Deletedialogboxmessage.isDisplayed())
+		{
+			AppLogger.logger.info("Delete dialogbox message displayed");
+		}
+		else
+		{
+			AppLogger.logger.info("Delete dialogbox message not displayed");
+		}
+		
+		if(CancelButton.isEnabled())
+		{
+			AppLogger.logger.info("cancel button enabled");
+		}
+		else
+		{
+			AppLogger.logger.info("cancel button not enabled");
+		}
+
+		if(OKButton.isEnabled())
+		{
+			AppLogger.logger.info("OK button enabled");
+		}
+		else
+		{
+			AppLogger.logger.info("OK button not enabled");
+		}
+		Utilitymethods.elementclick(CancelButton);
+		AppLogger.logger.info("cancel clicked");
+		if(CATEGORYPageMarker.isDisplayed())
+		{
+			AppLogger.logger.info("User in category page");
+		}
+		else
+		{
+			AppLogger.logger.info("User not in category page");
+		}
+		if(driver.findElement(By.xpath("//td[text()='"+categoryName+"']")).isDisplayed())
+		{
+			AppLogger.logger.info("category not deleted.");
+		}
+		else
+		{
+			AppLogger.logger.info("category deleted.");
+		}
+		driver.findElement(By.xpath("//td[text()='"+categoryName+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']")).click();
+		OKButton.click();
+		AppLogger.logger.info("now category deleted");
+		if(DeleteSuccessBanner.isDisplayed())
+		{
+			AppLogger.logger.info("Delete success banner displayed");
+		}
+		else
+		{
+			AppLogger.logger.info("Delete success banner not displayed");
+		}
+	}
 	}
 	
 	

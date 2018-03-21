@@ -284,3 +284,175 @@
 2018-03-21 02:26:03 [main] INFO  AppLogger:116 - Logout Successful
 2018-03-21 02:26:04 [main] INFO  AppLogger:126 - ================LogEnded=================
 2018-03-21 02:26:07 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-21 23:45:36 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-21 23:45:46 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-21 23:45:49 [main] INFO  AppLogger:170 - Delete popup displayed
+2018-03-21 23:45:49 [main] INFO  AppLogger:178 - Delete dialogbox message displayed
+2018-03-21 23:45:49 [main] INFO  AppLogger:187 - cancel button enabled
+2018-03-21 23:45:49 [main] INFO  AppLogger:196 - OK button enabled
+2018-03-21 23:45:50 [main] INFO  AppLogger:100 - A_Catagory_5 test is FAiled.
+2018-03-21 23:46:00 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-21 23:46:00 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-21 23:46:03 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-21 23:49:53 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-21 23:50:03 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-21 23:50:07 [main] INFO  AppLogger:170 - Delete popup displayed
+2018-03-21 23:50:07 [main] INFO  AppLogger:178 - Delete dialogbox message displayed
+2018-03-21 23:50:07 [main] INFO  AppLogger:187 - cancel button enabled
+2018-03-21 23:50:07 [main] INFO  AppLogger:196 - OK button enabled
+2018-03-21 23:50:07 [main] INFO  AppLogger:203 - cancel clicked
+2018-03-21 23:50:07 [main] INFO  AppLogger:100 - A_Catagory_5 test is FAiled.
+2018-03-21 23:50:17 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-21 23:50:17 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-21 23:50:20 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-21 23:53:22 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-21 23:53:32 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-21 23:53:35 [main] INFO  AppLogger:170 - Delete popup displayed
+2018-03-21 23:53:35 [main] INFO  AppLogger:178 - Delete dialogbox message displayed
+2018-03-21 23:53:35 [main] INFO  AppLogger:187 - cancel button enabled
+2018-03-21 23:53:35 [main] INFO  AppLogger:196 - OK button enabled
+2018-03-21 23:53:35 [main] INFO  AppLogger:203 - cancel clicked
+2018-03-21 23:53:35 [main] INFO  AppLogger:206 - User in category page
+2018-03-21 23:53:35 [main] INFO  AppLogger:214 - category not deleted.
+2018-03-21 23:53:35 [main] INFO  AppLogger:92 - A_Catagory_5 test is Passed.
+2018-03-21 23:53:46 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-21 23:53:46 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-21 23:53:48 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-21 23:57:27 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-21 23:57:36 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-21 23:57:40 [main] INFO  AppLogger:170 - Delete popup displayed
+2018-03-21 23:57:40 [main] INFO  AppLogger:178 - Delete dialogbox message displayed
+2018-03-21 23:57:40 [main] INFO  AppLogger:187 - cancel button enabled
+2018-03-21 23:57:40 [main] INFO  AppLogger:196 - OK button enabled
+2018-03-21 23:57:40 [main] INFO  AppLogger:203 - cancel clicked
+2018-03-21 23:57:40 [main] INFO  AppLogger:206 - User in category page
+2018-03-21 23:57:40 [main] INFO  AppLogger:214 - category not deleted.
+2018-03-21 23:57:40 [main] INFO  AppLogger:222 - category deleted
+2018-03-21 23:57:40 [main] INFO  AppLogger:92 - A_Catagory_5 test is Passed.
+2018-03-21 23:57:51 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-21 23:57:53 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-21 23:58:59 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-21 23:59:09 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-21 23:59:12 [main] INFO  AppLogger:87 - Add Category button is displayed.
+2018-03-21 23:59:12 [main] INFO  AppLogger:91 - Add Item button is displayed.
+2018-03-21 23:59:12 [main] INFO  AppLogger:95 - Search Category box is displayed.
+2018-03-21 23:59:12 [main] INFO  AppLogger:99 - Category grid is displayed.
+2018-03-22 00:03:16 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-22 00:03:26 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-22 00:03:30 [main] INFO  AppLogger:170 - Delete popup displayed
+2018-03-22 00:03:30 [main] INFO  AppLogger:178 - Delete dialogbox message displayed
+2018-03-22 00:03:30 [main] INFO  AppLogger:187 - cancel button enabled
+2018-03-22 00:03:30 [main] INFO  AppLogger:196 - OK button enabled
+2018-03-22 00:03:30 [main] INFO  AppLogger:203 - cancel clicked
+2018-03-22 00:03:30 [main] INFO  AppLogger:206 - User in category page
+2018-03-22 00:03:30 [main] INFO  AppLogger:214 - category not deleted.
+2018-03-22 00:03:30 [main] INFO  AppLogger:221 - category deleted
+2018-03-22 00:03:30 [main] INFO  AppLogger:92 - A_Catagory_5 test is Passed.
+2018-03-22 00:03:41 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-22 00:03:43 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-22 00:04:54 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-22 00:05:04 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-22 00:05:07 [main] INFO  AppLogger:170 - Delete popup displayed
+2018-03-22 00:05:07 [main] INFO  AppLogger:178 - Delete dialogbox message displayed
+2018-03-22 00:05:07 [main] INFO  AppLogger:187 - cancel button enabled
+2018-03-22 00:05:07 [main] INFO  AppLogger:196 - OK button enabled
+2018-03-22 00:05:07 [main] INFO  AppLogger:203 - cancel clicked
+2018-03-22 00:05:07 [main] INFO  AppLogger:206 - User in category page
+2018-03-22 00:05:07 [main] INFO  AppLogger:214 - category not deleted.
+2018-03-22 00:05:08 [main] INFO  AppLogger:222 - now category deleted
+2018-03-22 00:05:08 [main] INFO  AppLogger:92 - A_Catagory_5 test is Passed.
+2018-03-22 00:05:18 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-22 00:05:18 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-22 00:05:21 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-22 00:06:10 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-22 00:06:20 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-22 00:06:23 [main] INFO  AppLogger:87 - Add Category button is displayed.
+2018-03-22 00:06:23 [main] INFO  AppLogger:91 - Add Item button is displayed.
+2018-03-22 00:06:23 [main] INFO  AppLogger:95 - Search Category box is displayed.
+2018-03-22 00:06:23 [main] INFO  AppLogger:99 - Category grid is displayed.
+2018-03-22 00:08:54 [main] INFO  AppLogger:100 - A_Catagory_1 test is FAiled.
+2018-03-22 00:08:57 [main] INFO  AppLogger:114 - New Category closed button is displayed.
+2018-03-22 00:08:57 [main] INFO  AppLogger:119 - Category name label is displayed.
+2018-03-22 00:08:57 [main] INFO  AppLogger:123 - Category name field is displayed.
+2018-03-22 00:08:57 [main] INFO  AppLogger:127 - Add button is displayed in New CategoryWindow.
+2018-03-22 00:08:57 [main] INFO  AppLogger:92 - A_Catagory_2 test is Passed.
+2018-03-22 00:09:00 [main] INFO  AppLogger:92 - A_Catagory_3 test is Passed.
+2018-03-22 00:09:02 [main] INFO  AppLogger:157 - Category edit field is displayed.
+2018-03-22 00:09:03 [main] INFO  AppLogger:92 - A_Catagory_4 test is Passed.
+2018-03-22 00:09:05 [main] INFO  AppLogger:170 - Delete popup displayed
+2018-03-22 00:09:05 [main] INFO  AppLogger:178 - Delete dialogbox message displayed
+2018-03-22 00:09:05 [main] INFO  AppLogger:187 - cancel button enabled
+2018-03-22 00:09:05 [main] INFO  AppLogger:196 - OK button enabled
+2018-03-22 00:09:05 [main] INFO  AppLogger:203 - cancel clicked
+2018-03-22 00:09:05 [main] INFO  AppLogger:206 - User in category page
+2018-03-22 00:09:05 [main] INFO  AppLogger:214 - category not deleted.
+2018-03-22 00:09:06 [main] INFO  AppLogger:222 - now category deleted
+2018-03-22 00:09:06 [main] INFO  AppLogger:92 - A_Catagory_5 test is Passed.
+2018-03-22 00:09:16 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-22 00:09:16 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-22 00:09:19 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-22 00:11:12 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-22 00:11:22 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-22 00:11:25 [main] INFO  AppLogger:87 - Add Category button is displayed.
+2018-03-22 00:11:25 [main] INFO  AppLogger:91 - Add Item button is displayed.
+2018-03-22 00:11:25 [main] INFO  AppLogger:95 - Search Category box is displayed.
+2018-03-22 00:11:25 [main] INFO  AppLogger:99 - Category grid is displayed.
+2018-03-22 00:13:49 [main] INFO  AppLogger:100 - A_Catagory_1 test is FAiled.
+2018-03-22 00:13:59 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-22 00:14:02 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-22 00:16:05 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-22 00:16:14 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-22 00:16:17 [main] INFO  AppLogger:87 - Add Category button is displayed.
+2018-03-22 00:16:17 [main] INFO  AppLogger:91 - Add Item button is displayed.
+2018-03-22 00:16:17 [main] INFO  AppLogger:95 - Search Category box is displayed.
+2018-03-22 00:16:17 [main] INFO  AppLogger:99 - Category grid is displayed.
+2018-03-22 00:16:17 [main] INFO  AppLogger:100 - A_Catagory_1 test is FAiled.
+2018-03-22 00:16:28 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-22 00:16:28 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-22 00:16:31 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-22 00:20:28 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-22 00:20:38 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-22 00:20:40 [main] INFO  AppLogger:87 - Add Category button is displayed.
+2018-03-22 00:20:41 [main] INFO  AppLogger:91 - Add Item button is displayed.
+2018-03-22 00:20:41 [main] INFO  AppLogger:95 - Search Category box is displayed.
+2018-03-22 00:20:41 [main] INFO  AppLogger:99 - Category grid is displayed.
+2018-03-22 00:20:41 [main] INFO  AppLogger:103 - Category page marker grid is displayed.
+2018-03-22 00:20:41 [main] INFO  AppLogger:92 - A_Catagory_1 test is Passed.
+2018-03-22 00:20:51 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-22 00:20:51 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-22 00:20:54 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-22 00:28:04 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-22 00:28:13 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-22 00:29:06 [main] INFO  AppLogger:100 - A_Catagory_5 test is FAiled.
+2018-03-22 00:29:16 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-22 00:29:17 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-22 00:29:19 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-22 00:31:12 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-22 00:31:21 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-22 00:31:24 [main] INFO  AppLogger:90 - Add Category button is displayed.
+2018-03-22 00:31:24 [main] INFO  AppLogger:94 - Add Item button is displayed.
+2018-03-22 00:31:24 [main] INFO  AppLogger:98 - Search Category box is displayed.
+2018-03-22 00:31:24 [main] INFO  AppLogger:102 - Category grid is displayed.
+2018-03-22 00:31:24 [main] INFO  AppLogger:106 - Category page marker grid is displayed.
+2018-03-22 00:31:24 [main] INFO  AppLogger:92 - A_Catagory_1 test is Passed.
+2018-03-22 00:31:27 [main] INFO  AppLogger:116 - New Category closed button is displayed.
+2018-03-22 00:31:27 [main] INFO  AppLogger:121 - Category name label is displayed.
+2018-03-22 00:31:27 [main] INFO  AppLogger:125 - Category name field is displayed.
+2018-03-22 00:31:27 [main] INFO  AppLogger:129 - Add button is displayed in New CategoryWindow.
+2018-03-22 00:31:27 [main] INFO  AppLogger:92 - A_Catagory_2 test is Passed.
+2018-03-22 00:31:30 [main] INFO  AppLogger:92 - A_Catagory_3 test is Passed.
+2018-03-22 00:31:33 [main] INFO  AppLogger:159 - Category edit field is displayed.
+2018-03-22 00:31:33 [main] INFO  AppLogger:92 - A_Catagory_4 test is Passed.
+2018-03-22 00:31:35 [main] INFO  AppLogger:172 - Delete popup displayed
+2018-03-22 00:31:36 [main] INFO  AppLogger:180 - Delete dialogbox message displayed
+2018-03-22 00:31:36 [main] INFO  AppLogger:189 - cancel button enabled
+2018-03-22 00:31:36 [main] INFO  AppLogger:198 - OK button enabled
+2018-03-22 00:31:36 [main] INFO  AppLogger:205 - cancel clicked
+2018-03-22 00:31:36 [main] INFO  AppLogger:208 - User in category page
+2018-03-22 00:31:36 [main] INFO  AppLogger:216 - category not deleted.
+2018-03-22 00:31:36 [main] INFO  AppLogger:224 - now category deleted
+2018-03-22 00:31:36 [main] INFO  AppLogger:227 - Delete success banner displayed
+2018-03-22 00:31:36 [main] INFO  AppLogger:92 - A_Catagory_5 test is Passed.
+2018-03-22 00:31:47 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-22 00:31:47 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-22 00:31:49 [main] INFO  AppLogger:134 - Email sent Successfully
