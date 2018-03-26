@@ -1,7 +1,10 @@
 package pageObjectRepository;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import genericLib.AppLogger;
@@ -21,11 +24,17 @@ public class CategoryPage extends CategoryModuleTest{
 	@FindBy(xpath="//button[@ng-click='catCtrl.addCategory()']")
 	private WebElement AddCategoryButton;
 	
+	@FindBy(xpath="//input[@placeholder='name']")
+	private WebElement CategoryNameField;
+	
 	@FindBy(xpath="//button[@ng-click='catCtrl.addItem()']")
 	private WebElement AddItemButton;
 	
 	@FindBy(xpath="//button[text()='Add']")
 	private WebElement NewCategoryAddButton;
+	
+	@FindBy(xpath="//input[@placeholder='Search']")
+	private WebElement SearchButtonCategoryPage;
 	
 	@FindBy(xpath="//div[text()='category added']")
 	private WebElement AddCategorySuccessBanner;
@@ -75,8 +84,6 @@ public class CategoryPage extends CategoryModuleTest{
 	@FindBy(xpath="//label[text()='Category Name']")
 	private WebElement CategoryNameLabel;
 	
-	@FindBy(xpath="//input[@placeholder='name']")
-	private WebElement CategoryNameField;
 	
 	@FindBy(xpath="//button[text()='Add']")
 	private WebElement AddButtonInNewCategoryDialog;
@@ -231,10 +238,41 @@ public class CategoryPage extends CategoryModuleTest{
 			AppLogger.logger.info("Delete success banner not displayed");
 		}
 	}
+	public void SearchCategory(String categoryname) throws Exception
+	{
+		Utilitymethods.elementclick(AddCategoryButton);
+		Utilitymethods.enterText(CategoryNameField,categoryname);
+		Utilitymethods.elementclick(NewCategoryAddButton);
+		Utilitymethods.enterText(SearchButtonCategoryPage,categoryname);
+		if(driver.findElement(By.xpath("//td[text()='"+categoryname+"']")).isDisplayed())
+		{
+			AppLogger.logger.info("Category dispalyed Successfully");
+		}
+		else
+		{
+			AppLogger.logger.info("Category not dispalyed in category table");
+		}
+		driver.findElement(By.xpath("//td[text()='"+categoryname+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']")).click();
+		Utilitymethods.elementclick(OKButton);
+		Utilitymethods.DelayBy(2);
+		Boolean value=driver.findElement(By.xpath("//td[text()='Search_Category']")).isDisplayed();
+		System.out.println(value);
+//		Utilitymethods.enterText(SearchButtonCategoryPage,categoryname);
+//		Actions act=new Actions(driver);
+//		act.sendKeys(Keys.ENTER).perform();
+//		if(driver.findElement(By.xpath("//td[text()='"+categoryname+"']")).isDisplayed())
+//		{
+//			AppLogger.logger.info("Category Still exist");
+//		}
+//		else
+//		{
+//			AppLogger.logger.info("Category deleted successfully");
+//		}
+	}
 	}
 	
 	
 	
 	
-	
+
 

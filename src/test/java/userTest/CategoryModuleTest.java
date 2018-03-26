@@ -13,85 +13,104 @@ import pageObjectRepository.CommonPage;
 
 public class CategoryModuleTest extends BaseTest{
 	
-	@Test
-	public void A_Catagory_1() throws Exception
-	{
-			CommonPage common=new CommonPage();
-			common.clickCategorySpan();
-			CategoryPage category=new CategoryPage();
-			category.CategoryPageAllElementVerification();	
-	}
-	
+//	@Test
+//	public void A_Catagory_1() throws Exception
+//	{
+//			CommonPage common=new CommonPage();
+//			common.clickCategorySpan();
+//			CategoryPage category=new CategoryPage();
+//			category.CategoryPageAllElementVerification();	
+//	}
+//	
+//	@DataProvider
+//	public Object[][] A_Catagory_2Testdata(){
+//	return DataUtil.getData("A_Catagory_2","Category", xls);		
+//	}
+//	@Test(dataProvider="A_Catagory_2Testdata")
+//	public void A_Catagory_2(Hashtable<String,String>data) throws Exception
+//	{
+//		if(data.get("RunMode").equals("N"))
+//			{
+//				AppLogger.logger.info("A_Catagory_2 test skipped");
+//				throw new SkipException("Skipping the Test");
+//			}
+//			CommonPage common=new CommonPage();
+//			common.clickCategorySpan();
+//			CategoryPage category=new CategoryPage();
+//			category.NewCategoryDialogAllElementVerification(data.get("Categoryname"));
+//	}
+//	@DataProvider
+//	public Object[][] A_Catagory_3Testdata(){
+//	return DataUtil.getData("A_Catagory_3","Category", xls);		
+//	}
+//	@Test(dataProvider="A_Catagory_3Testdata")
+//	public void A_Catagory_3(Hashtable<String,String>data) throws Exception
+//	{
+//		if(data.get("RunMode").equals("N"))
+//		{
+//			AppLogger.logger.info("A_Catagory_3 test skipped");
+//			throw new SkipException("Skipping the Test");
+//		}
+//		CommonPage common=new CommonPage();
+//		common.clickCategorySpan();
+//		CategoryPage category=new CategoryPage();
+//		String actualmessage=category.AddcategoryFeature(data.get("Categoryname"));
+//		Assert.assertEquals(actualmessage,"category added");
+//	}
+//	@DataProvider
+//	public Object[][] A_Catagory_4Testdata(){
+//	return DataUtil.getData("A_Catagory_4","Category", xls);		
+//	}
+//	@Test(dataProvider="A_Catagory_4Testdata")
+//	public void A_Catagory_4(Hashtable<String,String>data) throws Exception
+//	{
+//		if(data.get("RunMode").equals("N"))
+//		{
+//			AppLogger.logger.info("A_Catagory_4 test skipped");
+//			throw new SkipException("Skipping the Test");
+//		}
+//		CommonPage common=new CommonPage();
+//		common.clickCategorySpan();
+//		CategoryPage category=new CategoryPage();
+//		category.EditCategoryfeature(data.get("EditCategoryname"),data.get("Categoryname"));
+//	}
+//	@DataProvider
+//	public Object[][] A_Catagory_5Testdata()
+//	{
+//		return DataUtil.getData("A_Catagory_5","Category", xls);
+//	}
+//	@Test(dataProvider="A_Catagory_5Testdata")
+//		public void A_Catagory_5(Hashtable<String,String>data) throws Exception
+//		{
+//			if(data.get("RunMode").equals("N"))
+//			{
+//				AppLogger.logger.info("A_Catagory_5 test skipped");
+//				throw new SkipException("Skipping the Test");
+//			}
+//			CommonPage common=new CommonPage();
+//			common.clickCategorySpan();
+//			CategoryPage category=new CategoryPage();
+//			 category=new CategoryPage();
+//			category.DeleteCategoryfeature(data.get("Categoryname"));
+//		}
 	@DataProvider
-	public Object[][] A_Catagory_2Testdata(){
-	return DataUtil.getData("A_Catagory_2","Category", xls);		
-	}
-	@Test(dataProvider="A_Catagory_2Testdata")
-	public void A_Catagory_2(Hashtable<String,String>data) throws Exception
+	public Object[][] A_Category_6Testdata()
 	{
-		if(data.get("RunMode").equals("N"))
-			{
-				AppLogger.logger.info("A_Catagory_2 test skipped");
-				throw new SkipException("Skipping the Test");
-			}
-			CommonPage common=new CommonPage();
-			common.clickCategorySpan();
-			CategoryPage category=new CategoryPage();
-			category.NewCategoryDialogAllElementVerification(data.get("Categoryname"));
+		return DataUtil.getData("A_Catagory_6", "Category", xls);
 	}
-	@DataProvider
-	public Object[][] A_Catagory_3Testdata(){
-	return DataUtil.getData("A_Catagory_3","Category", xls);		
-	}
-	@Test(dataProvider="A_Catagory_3Testdata")
-	public void A_Catagory_3(Hashtable<String,String>data) throws Exception
+	@Test(dataProvider="A_Category_6Testdata")
+	public void A_Categogry_6(Hashtable<String,String>data) throws Exception
 	{
 		if(data.get("RunMode").equals("N"))
 		{
-			AppLogger.logger.info("A_Catagory_3 test skipped");
+			AppLogger.logger.info("A_Category_6 test skipped");
 			throw new SkipException("Skipping the Test");
 		}
 		CommonPage common=new CommonPage();
 		common.clickCategorySpan();
 		CategoryPage category=new CategoryPage();
-		String actualmessage=category.AddcategoryFeature(data.get("Categoryname"));
-		Assert.assertEquals(actualmessage,"category added");
+		category.SearchCategory(data.get("Categoryname"));
 	}
-	@DataProvider
-	public Object[][] A_Catagory_4Testdata(){
-	return DataUtil.getData("A_Catagory_4","Category", xls);		
-	}
-	@Test(dataProvider="A_Catagory_4Testdata")
-	public void A_Catagory_4(Hashtable<String,String>data) throws Exception
-	{
-		if(data.get("RunMode").equals("N"))
-		{
-			AppLogger.logger.info("A_Catagory_4 test skipped");
-			throw new SkipException("Skipping the Test");
-		}
-		CommonPage common=new CommonPage();
-		common.clickCategorySpan();
-		CategoryPage category=new CategoryPage();
-		category.EditCategoryfeature(data.get("EditCategoryname"),data.get("Categoryname"));
-	}
-	@DataProvider
-	public Object[][] A_Catagory_5Testdata()
-	{
-		return DataUtil.getData("A_Catagory_5","Category", xls);
-	}
-	@Test(dataProvider="A_Catagory_5Testdata")
-		public void A_Catagory_5(Hashtable<String,String>data) throws Exception
-		{
-			if(data.get("RunMode").equals("N"))
-			{
-				AppLogger.logger.info("A_Catagory_5 test skipped");
-				throw new SkipException("Skipping the Test");
-			}
-			CommonPage common=new CommonPage();
-			common.clickCategorySpan();
-			CategoryPage category=new CategoryPage();
-			category.DeleteCategoryfeature(data.get("Categoryname"));
-		}
 	}
 
 	
