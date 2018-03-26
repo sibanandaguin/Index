@@ -528,3 +528,18 @@
 2018-03-26 00:48:42 [main] INFO  AppLogger:116 - Logout Successful
 2018-03-26 00:48:43 [main] INFO  AppLogger:126 - ================LogEnded=================
 2018-03-26 00:48:45 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-26 23:24:48 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-26 23:25:02 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-26 23:25:07 [main] INFO  AppLogger:249 - Category dispalyed Successfully
+2018-03-26 23:26:01 [main] INFO  AppLogger:100 - A_Categogry_6 test is FAiled.
+2018-03-26 23:26:11 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-26 23:26:11 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-26 23:26:14 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-03-26 23:55:52 [main] INFO  AppLogger:50 - ================LogStarted=================
+2018-03-26 23:56:07 [main] INFO  AppLogger:62 - Login Successful.
+2018-03-26 23:56:13 [main] INFO  AppLogger:251 - Category dispalyed Successfully
+2018-03-26 23:57:06 [main] INFO  AppLogger:267 - Category deleted successfully
+2018-03-26 23:57:06 [main] INFO  AppLogger:92 - A_Categogry_6 test is Passed.
+2018-03-26 23:57:17 [main] INFO  AppLogger:116 - Logout Successful
+2018-03-26 23:57:18 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-03-26 23:57:21 [main] INFO  AppLogger:134 - Email sent Successfully

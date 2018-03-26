@@ -1,5 +1,7 @@
 package pageObjectRepository;
 
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -255,19 +257,15 @@ public class CategoryPage extends CategoryModuleTest{
 		driver.findElement(By.xpath("//td[text()='"+categoryname+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']")).click();
 		Utilitymethods.elementclick(OKButton);
 		Utilitymethods.DelayBy(2);
-		Boolean value=driver.findElement(By.xpath("//td[text()='Search_Category']")).isDisplayed();
-		System.out.println(value);
-//		Utilitymethods.enterText(SearchButtonCategoryPage,categoryname);
-//		Actions act=new Actions(driver);
-//		act.sendKeys(Keys.ENTER).perform();
-//		if(driver.findElement(By.xpath("//td[text()='"+categoryname+"']")).isDisplayed())
-//		{
-//			AppLogger.logger.info("Category Still exist");
-//		}
-//		else
-//		{
-//			AppLogger.logger.info("Category deleted successfully");
-//		}
+		Utilitymethods.enterText(SearchButtonCategoryPage,categoryname);
+		Actions act=new Actions(driver);
+		act.sendKeys(Keys.ENTER).perform();
+		if(driver.findElements(By.xpath("//td[text()='"+categoryname+"']")).size()>0)
+			AppLogger.logger.info("Category Still exist");
+		else
+		{
+			AppLogger.logger.info("Category deleted successfully");
+		}
 	}
 	}
 	
