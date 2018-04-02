@@ -1,66 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="89947" started-at="2018-03-26T18:25:51Z" finished-at="2018-03-26T18:27:21Z">
+  <suite name="Suite" duration-ms="71790" started-at="2018-04-02T19:43:30Z" finished-at="2018-04-02T19:44:42Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="89947" started-at="2018-03-26T18:25:51Z" finished-at="2018-03-26T18:27:21Z">
-      <class name="userTest.CategoryModuleTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:userTest.CategoryModuleTest@2f54a33d]" name="setUp" is-config="true" duration-ms="322" started-at="2018-03-26T23:55:51Z" finished-at="2018-03-26T23:55:52Z">
+    <test name="Test" duration-ms="71790" started-at="2018-04-02T19:43:30Z" finished-at="2018-04-02T19:44:42Z">
+      <class name="userTest.VendorModuleTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="setUp" is-config="true" duration-ms="237" started-at="2018-04-03T01:13:30Z" finished-at="2018-04-03T01:13:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="primarySetup()[pri:0, instance:userTest.CategoryModuleTest@2f54a33d]" name="primarySetup" is-config="true" duration-ms="15897" started-at="2018-03-26T23:55:52Z" finished-at="2018-03-26T23:56:07Z">
+        <test-method status="PASS" signature="primarySetup()[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="primarySetup" is-config="true" duration-ms="41225" started-at="2018-04-03T01:13:31Z" finished-at="2018-04-03T01:14:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- primarySetup -->
-        <test-method status="PASS" signature="register(java.lang.reflect.Method)[pri:0, instance:userTest.CategoryModuleTest@2f54a33d]" name="register" is-config="true" duration-ms="8" started-at="2018-03-26T23:56:08Z" finished-at="2018-03-26T23:56:08Z">
+        <test-method status="PASS" signature="register(java.lang.reflect.Method)[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="register" is-config="true" duration-ms="4" started-at="2018-04-03T01:14:12Z" finished-at="2018-04-03T01:14:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void userTest.CategoryModuleTest.A_Categogry_6(java.util.Hashtable) throws java.lang.Exception]]>
+                <![CDATA[public void userTest.VendorModuleTest.A_Vendor_2(java.util.Hashtable) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- register -->
-        <test-method status="PASS" signature="A_Categogry_6(java.util.Hashtable)[pri:0, instance:userTest.CategoryModuleTest@2f54a33d]" name="A_Categogry_6" duration-ms="58608" started-at="2018-03-26T23:56:08Z" data-provider="A_Category_6Testdata" finished-at="2018-03-26T23:57:06Z">
+        <test-method status="PASS" signature="A_Vendor_2(java.util.Hashtable)[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="A_Vendor_2" duration-ms="9497" started-at="2018-04-03T01:14:12Z" data-provider="A_Vendor_2Testdata" finished-at="2018-04-03T01:14:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{RunMode=Y, RowNum=21, Categoryname=Search_Category}]]>
+                <![CDATA[{Name=Sibananda Guin, Mobile=8971969416, RunMode=Y, GSTIN Number=29BGIPG9703P1Z5, VendorType=Inter State, RowNum=3, Email=sibanandaguin123@gmail.com, Address=JP Nagar 8th Phase}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- A_Categogry_6 -->
-        <test-method status="PASS" signature="captureStatus(org.testng.ITestResult)[pri:0, instance:userTest.CategoryModuleTest@2f54a33d]" name="captureStatus" is-config="true" duration-ms="54" started-at="2018-03-26T23:57:06Z" finished-at="2018-03-26T23:57:06Z">
+        </test-method> <!-- A_Vendor_2 -->
+        <test-method status="PASS" signature="captureStatus(org.testng.ITestResult)[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="captureStatus" is-config="true" duration-ms="60" started-at="2018-04-03T01:14:21Z" finished-at="2018-04-03T01:14:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=A_Categogry_6 status=SUCCESS method=CategoryModuleTest.A_Categogry_6(java.util.Hashtable)[pri:0, instance:userTest.CategoryModuleTest@2f54a33d] output={null}]]]>
+                <![CDATA[[TestResult name=A_Vendor_2 status=SUCCESS method=VendorModuleTest.A_Vendor_2(java.util.Hashtable)[pri:0, instance:userTest.VendorModuleTest@6aba2b86] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureStatus -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:userTest.CategoryModuleTest@2f54a33d]" name="closeBrowser" is-config="true" duration-ms="11535" started-at="2018-03-26T23:57:06Z" finished-at="2018-03-26T23:57:18Z">
+        <test-method status="PASS" signature="register(java.lang.reflect.Method)[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="register" is-config="true" duration-ms="0" started-at="2018-04-03T01:14:22Z" finished-at="2018-04-03T01:14:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void userTest.VendorModuleTest.A_Vendor_2(java.util.Hashtable) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="A_Vendor_2(java.util.Hashtable)[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="A_Vendor_2" duration-ms="4923" started-at="2018-04-03T01:14:22Z" data-provider="A_Vendor_2Testdata" finished-at="2018-04-03T01:14:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Name=Kalinga Beura, Mobile=9110676066, RunMode=Y, GSTIN Number=29BGIPG9703P1Z8, VendorType=Outer State, RowNum=4, Email=nanda.guin@gmail.com, Address=JP Nagar 8th Phase}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- A_Vendor_2 -->
+        <test-method status="PASS" signature="captureStatus(org.testng.ITestResult)[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="captureStatus" is-config="true" duration-ms="5" started-at="2018-04-03T01:14:26Z" finished-at="2018-04-03T01:14:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=A_Vendor_2 status=SUCCESS method=VendorModuleTest.A_Vendor_2(java.util.Hashtable)[pri:0, instance:userTest.VendorModuleTest@6aba2b86] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureStatus -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="closeBrowser" is-config="true" duration-ms="12768" started-at="2018-04-03T01:14:26Z" finished-at="2018-04-03T01:14:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="generateReport()[pri:0, instance:userTest.CategoryModuleTest@2f54a33d]" name="generateReport" is-config="true" duration-ms="3439" started-at="2018-03-26T23:57:18Z" finished-at="2018-03-26T23:57:21Z">
+        <test-method status="PASS" signature="generateReport()[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="generateReport" is-config="true" duration-ms="3017" started-at="2018-04-03T01:14:39Z" finished-at="2018-04-03T01:14:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-        <test-method status="PASS" signature="afterSuit()[pri:0, instance:userTest.CategoryModuleTest@2f54a33d]" name="afterSuit" is-config="true" duration-ms="3" started-at="2018-03-26T23:57:21Z" finished-at="2018-03-26T23:57:21Z">
+        <test-method status="PASS" signature="afterSuit()[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="afterSuit" is-config="true" duration-ms="7411" started-at="2018-04-03T01:14:42Z" finished-at="2018-04-03T01:14:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuit -->
-      </class> <!-- userTest.CategoryModuleTest -->
+      </class> <!-- userTest.VendorModuleTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

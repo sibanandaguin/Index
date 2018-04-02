@@ -21,6 +21,8 @@ public class CommonPage extends BaseTest
 	
 	@FindBy(xpath="//span[text()='Category']")
 	private WebElement CategorySpan;
+	@FindBy(xpath="//span[text()='Vendor']")
+	private WebElement VendorSpan;
 	
 	
 	
@@ -38,6 +40,12 @@ public class CommonPage extends BaseTest
 	{
 		Utilitymethods.DelayBy(2);
 		Utilitymethods.elementclick(CategorySpan);
+	}
+	
+	public void clickVendorSpan() throws Exception
+	{
+		Utilitymethods.DelayBy(2);
+		Utilitymethods.elementclick(VendorSpan);
 	}
 	
 }

@@ -12,15 +12,16 @@ public class Browser extends BaseTest {
 	public static WebDriver getBrowser(){
 		
 	if(GlobalEntitie.browser.equals("ie")){
-		System.setProperty("webdriver.ie.driver", "D:\\IndexErp\\IndexErpAutomation\\src\\main\\resources\\Drivers\\IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver",System.getProperty("user.dir")+"\\src\\main\\resources\\Drivers\\IEDriverServer.exe");
 		driver = new InternetExplorerDriver(); 
 	}
 	
 	if(GlobalEntitie.browser.equals("chrome")){
-		System.setProperty("webdriver.chrome.driver", "D:\\IndexErp\\IndexErpAutomation\\src\\main\\resources\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver(); 
 	}
 	if(GlobalEntitie.browser.equals("firefox")){
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\Drivers\\geckodriver.exe");
 		driver = new FirefoxDriver(); 
 	}
 	return driver;

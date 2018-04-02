@@ -1,9 +1,17 @@
 package genericLib;
 
-import org.openqa.selenium.By;
+import java.io.File;
+import java.util.NoSuchElementException;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+
 import userTest.BaseTest;
 
 public class Utilitymethods extends BaseTest
@@ -50,4 +58,51 @@ public class Utilitymethods extends BaseTest
 		return System.getProperty("user.dir")+path;
 	}
 	
+	public static void elementIsDisplayed(WebElement wb,String elementName)
+	{
+		try
+		{
+			
+			boolean b=wb.isDisplayed();
+			if(b) 
+			{
+				AppLogger.logger.info(elementName+" is Displayed.");
+			}
+		}
+		catch(NoSuchElementException nse)
+		{
+			AppLogger.logger.info(elementName+" is not Displayed.");
+		}
+	}
+	
+	public static void dropDownSelectionByText(WebElement wb,String text)
+	{
+		Select sel=new Select(wb);
+		sel.selectByVisibleText(text);
+	}
+	public static String captureScreenShot(WebDriver driver, String ScreenShotName){
+		try{
+			TakesScreenshot ts=(TakesScreenshot)driver;
+			File Source = ts.getScreenshotAs(OutputType.FILE);
+			String dest="D:\\IndexErp\\IndexErpAutomation\\src\\main\\resources\\Screenshots\\"+ScreenShotName+".png";
+			File destination = new File(dest);
+			FileUtils.copyFile(Source, destination);
+			System.out.println("Screen shot taken");
+			return dest;
+		}
+		catch (Exception e){
+			System.out.println("Exception while capturing screen shot"+e.getMessage());
+			return e.getMessage();
+		}
+	}
+	public static void checkColor(WebElement wb,String colorhex,String elemnetName )
+	{
+		
+		String rgbcolor = wb.getCssValue("background-color");
+		String hex = Color.fromString(rgbcolor).asHex();
+		if(hex.equals(colorhex))
+		{
+			AppLogger.logger.info(elemnetName+"'s color is displayed as Expected.");
+		}else {AppLogger.logger.info(elemnetName+"'s color is not displayed as Expected.");}
+	}
 }

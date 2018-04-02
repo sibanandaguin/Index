@@ -24,7 +24,6 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import genericLib.AppLogger;
 import genericLib.Browser;
 import genericLib.GlobalEntitie;
-import genericLib.ScreenshotClass;
 import genericLib.SentEmail;
 import genericLib.Utilitymethods;
 import genericLib.ExcelLib;
@@ -93,7 +92,7 @@ public class BaseTest
 			}
 			else if(result.getStatus()==ITestResult.FAILURE)
 			{
-				String screenShotPath=ScreenshotClass.captureScreenShot(driver, result.getName());
+				String screenShotPath=Utilitymethods.captureScreenShot(driver, result.getName());
 				test.fail(MarkupHelper.createLabel(result.getName()+" is failed.", ExtentColor.RED));
 				test.fail(result.getThrowable());
 				test.fail("Screenshot below:"+test.addScreenCaptureFromPath(screenShotPath));
@@ -130,7 +129,7 @@ public class BaseTest
 		public void afterSuit()
 		{
 			try {
-				//SentEmail.sentEmail();
+				SentEmail.sentEmail();
 				AppLogger.logger.info("Email sent Successfully");
 			}
 			catch(Exception ex){

@@ -17,12 +17,19 @@ public static void sentEmail() throws Exception {
   MultiPartEmail email = new MultiPartEmail();
   email.setHostName("smtp.gmail.com");
   email.setSmtpPort(25);
-  email.setAuthenticator(new DefaultAuthenticator("nanda.guin@gmail.com", "myattitude"));
+  email.setAuthenticator(new DefaultAuthenticator("sibanandaguin123@gmail.com", "myhighvision"));
   email.setSSLOnConnect(true);
-  email.setFrom("nanda.guin@gmail.com");
-  email.setSubject("TestMail");
-  email.setMsg("This is a test mail ... :-)");
-  email.addTo("sibanandaguin123@gmail.com");
+  email.setFrom("sibanandaguin123@gmail.com");
+  email.setSubject("IndexErp Test Reports");
+  email.setMsg("Hi All ,");
+  email.setMsg("Hi All,\r\n" + 
+  		"\r\n" + 
+  		"Please find the attachment test result file.\r\n" + 
+  		"\r\n" + 
+  		"Thanks And Regards\r\n" + 
+  		"-Sibananda & Kalinga");
+  email.addTo("nanda.guin@gmail.com");
+  email.addTo("kkbeura1993@gmail.com");
 
   // add the attachment
   email.attach(attachment);

@@ -3,18 +3,18 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="userTest.CategoryModuleTest">
+      <class name="userTest.VendorModuleTest">
         <methods>
           <include name="generateReport"/>
           <include name="register"/>
           <include name="primarySetup"/>
           <include name="closeBrowser"/>
+          <include name="A_Vendor_2"/>
           <include name="captureStatus"/>
-          <include name="A_Categogry_6" invocation-numbers="0"/>
           <include name="afterSuit"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- userTest.CategoryModuleTest -->
+      </class> <!-- userTest.VendorModuleTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
