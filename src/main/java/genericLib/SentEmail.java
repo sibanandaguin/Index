@@ -21,13 +21,7 @@ public static void sentEmail() throws Exception {
   email.setSSLOnConnect(true);
   email.setFrom("sibanandaguin123@gmail.com");
   email.setSubject("IndexErp Test Reports");
-  email.setMsg("Hi All ,");
-  email.setMsg("Hi All,\r\n" + 
-  		"\r\n" + 
-  		"Please find the attachment test result file.\r\n" + 
-  		"\r\n" + 
-  		"Thanks And Regards\r\n" + 
-  		"-Sibananda & Kalinga");
+  email.setMsg("Automation Test Result");
   email.addTo("nanda.guin@gmail.com");
   email.addTo("kkbeura1993@gmail.com");
 
