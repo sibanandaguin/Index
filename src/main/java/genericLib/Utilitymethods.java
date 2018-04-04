@@ -30,7 +30,21 @@ public class Utilitymethods extends BaseTest
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(wb));
 	}
-	
+	public static void elementIsEnabled(WebElement element,String elementName)
+	{
+		try
+		{
+			boolean b=element.isEnabled();
+			if(b)
+			{
+				AppLogger.logger.info(elementName+"is enabled");
+			}
+		}
+		catch(Exception e)
+		{
+			AppLogger.logger.info(elementName+"is not enabled");
+		}
+	}
 	//static method to enter value in text box
 	public static void enterText(WebElement element,String value)
 	{
@@ -84,7 +98,7 @@ public class Utilitymethods extends BaseTest
 		try{
 			TakesScreenshot ts=(TakesScreenshot)driver;
 			File Source = ts.getScreenshotAs(OutputType.FILE);
-			String dest="D:\\IndexErp\\IndexErpAutomation\\src\\main\\resources\\Screenshots\\"+ScreenShotName+".png";
+			String dest="C:\\Index\\indexerp\\src\\main\\resources\\Screenshots\\"+ScreenShotName+".png";
 			File destination = new File(dest);
 			FileUtils.copyFile(Source, destination);
 			System.out.println("Screen shot taken");

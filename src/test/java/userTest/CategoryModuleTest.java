@@ -54,8 +54,8 @@ public class CategoryModuleTest extends BaseTest{
 		CommonPage common=new CommonPage();
 		common.clickCategorySpan();
 		CategoryPage category=new CategoryPage();
-		String actualmessage=category.AddcategoryFeature(data.get("Categoryname"));
-		Assert.assertEquals(actualmessage,"category added");
+		category.AddcategoryFeature(data.get("Categoryname"));
+		//Assert.assertEquals(actualmessage,"category added");
 	}
 	@DataProvider
 	public Object[][] A_Catagory_4Testdata(){
@@ -111,7 +111,36 @@ public class CategoryModuleTest extends BaseTest{
 		CategoryPage category=new CategoryPage();
 		category.SearchCategory(data.get("Categoryname"));
 	}
+	
+	@Test
+	public void A_Catagory_7() throws Exception
+	{
+		CommonPage common=new CommonPage();
+		common.clickCategorySpan();
+		CategoryPage category=new CategoryPage();
+		category.VerifyAddItemFeature();
 	}
+	@DataProvider
+	public Object[][] A_Category_8Testdata()
+	{
+		return DataUtil.getData("A_Catagory_8", "Category", xls);
+	}
+	@Test(dataProvider="A_Category_8Testdata")
+	
+		public void A_Category_8(Hashtable<String,String>data) throws Exception
+		{
+			if(data.get("RunMode").equals("N"))
+			{
+				AppLogger.logger.info("A_Category_8 test skipped");
+				throw new SkipException("Skipping the Test");
+			}
+			CommonPage common=new CommonPage();
+			common.clickCategorySpan();
+			CategoryPage category=new CategoryPage();
+			category.VerifycategoryNewItempage(data.get("Categoryname"));
+		}
+	}
+	
 
 	
 
