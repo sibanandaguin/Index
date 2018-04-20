@@ -53,7 +53,7 @@ public class BaseTest
 			   driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
 			   driver.manage().deleteAllCookies();
 			   driver.navigate().to(GlobalEntitie.stgurl);
-			   driver.manage().window().maximize();
+			   //driver.manage().window().maximize();
 			   
 			   //For Login
 			   LoginPage lp=new LoginPage();
@@ -129,7 +129,7 @@ public class BaseTest
 		public void afterSuit()
 		{
 			try {
-				SentEmail.sentEmail();
+				//SentEmail.sentEmail();
 				AppLogger.logger.info("Email sent Successfully");
 			}
 			catch(Exception ex){

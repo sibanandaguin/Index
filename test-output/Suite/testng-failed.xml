@@ -9,8 +9,8 @@
           <include name="register"/>
           <include name="primarySetup"/>
           <include name="closeBrowser"/>
-          <include name="A_Vendor_2" invocation-numbers="0 1"/>
           <include name="captureStatus"/>
+          <include name="A_Vendor_3" invocation-numbers="0 1"/>
           <include name="afterSuit"/>
           <include name="setUp"/>
         </methods>

@@ -3,6 +3,7 @@ package genericLib;
 import java.io.File;
 import java.util.NoSuchElementException;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -18,33 +19,73 @@ public class Utilitymethods extends BaseTest
 {
 	public static WebDriverWait wait = new WebDriverWait(driver,60);
 	
-	//WebDriver explicitly wait for element presence
-	public static void isElementVisible(WebElement Wb) 
+	
+	public static void waitForElementDisplayed(WebElement element) throws Exception
 	{
-		
-		wait.until(ExpectedConditions.visibilityOf(Wb));
+		for(int i=0;i<10;i++)
+		{
+            try{
+                element.isDisplayed();
+                break;
+            }
+            catch(Exception e)
+            {
+            	Utilitymethods.DelayBy(1);
+
+            }  
+		}
+	}
+	public static void waitForElementDisplayed(WebDriver driver,String Xpath) throws Exception
+	{
+		for(int i=0;i<10;i++)
+		{
+            try{
+                driver.findElement(By.xpath(Xpath)).isDisplayed();
+                break;
+            }
+            catch(Exception e)
+            {
+            	Utilitymethods.DelayBy(1);
+
+            }  
+		}
+	}
+	public static boolean isElementDisplayed(WebDriver driver,String xpath)
+	{
+		int count=driver.findElements(By.xpath(xpath)).size();
+		if(count==0)
+		 {
+			AppLogger.logger.info("Element does not Exist in the WebPage.");
+			return false;
+		 }
+		else if(count==1)
+		{
+			return true;
+		}
+		else
+		{
+			AppLogger.logger.info("Multiple xpath found in the WebPage.");
+			return false;
+		}
+	}
+	public static boolean isElementDisplayed(WebElement element)
+	{
+		try {
+			element.isDisplayed();
+			return true;
+		}
+		catch(Exception ex)
+		{
+			return false;
+		}
 	}
 	
 	//WebDriver explicitly wait for element clickable
-	public static void isClickable(WebElement wb) 
+	public static void waitForClickable(WebElement wb) 
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(wb));
 	}
-	public static void elementIsEnabled(WebElement element,String elementName)
-	{
-		try
-		{
-			boolean b=element.isEnabled();
-			if(b)
-			{
-				AppLogger.logger.info(elementName+"is enabled");
-			}
-		}
-		catch(Exception e)
-		{
-			AppLogger.logger.info(elementName+"is not enabled");
-		}
-	}
+	
 	//static method to enter value in text box
 	public static void enterText(WebElement element,String value)
 	{
@@ -55,7 +96,7 @@ public class Utilitymethods extends BaseTest
 	//Static method to click an element
 	public static void elementclick(WebElement element)
 	{
-		isClickable(element);
+		waitForClickable(element);
 		element.click();
 		
 	}
@@ -66,28 +107,7 @@ public class Utilitymethods extends BaseTest
 		Thread.sleep(TimeInMiliSec);
 	}
 	
-	public static String getPath(String path)
-	{
-		
-		return System.getProperty("user.dir")+path;
-	}
 	
-	public static void elementIsDisplayed(WebElement wb,String elementName)
-	{
-		try
-		{
-			
-			boolean b=wb.isDisplayed();
-			if(b) 
-			{
-				AppLogger.logger.info(elementName+" is Displayed.");
-			}
-		}
-		catch(NoSuchElementException nse)
-		{
-			AppLogger.logger.info(elementName+" is not Displayed.");
-		}
-	}
 	
 	public static void dropDownSelectionByText(WebElement wb,String text)
 	{
@@ -109,7 +129,7 @@ public class Utilitymethods extends BaseTest
 			return e.getMessage();
 		}
 	}
-	public static void checkColor(WebElement wb,String colorhex,String elemnetName )
+	public static boolean checkColor(WebElement wb,String colorhex,String elemnetName )
 	{
 		
 		String rgbcolor = wb.getCssValue("background-color");
@@ -117,6 +137,14 @@ public class Utilitymethods extends BaseTest
 		if(hex.equals(colorhex))
 		{
 			AppLogger.logger.info(elemnetName+"'s color is displayed as Expected.");
-		}else {AppLogger.logger.info(elemnetName+"'s color is not displayed as Expected.");}
+			return true;
+		}
+		else {
+			AppLogger.logger.info(elemnetName+"'s color is not displayed as Expected.");
+			return false;
+			}
 	}
+	
+	
+	
 }

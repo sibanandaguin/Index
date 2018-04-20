@@ -24,6 +24,9 @@ public class CommonPage extends BaseTest
 	@FindBy(xpath="//span[text()='Vendor']")
 	private WebElement VendorSpan;
 	
+	@FindBy(xpath="//button[@ng-click='venCtrl.addVendor()']")
+	private WebElement AddVendorButton;
+	
 	
 	
 	
@@ -42,10 +45,10 @@ public class CommonPage extends BaseTest
 		Utilitymethods.elementclick(CategorySpan);
 	}
 	
-	public void clickVendorSpan() throws Exception
+	public void goToVendorPage() throws Exception
 	{
-		Utilitymethods.DelayBy(2);
 		Utilitymethods.elementclick(VendorSpan);
+		
 	}
 	
 }
