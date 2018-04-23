@@ -99,6 +99,11 @@ public class VendorPage extends VendorModuleTest{
 	@FindBy(xpath="(//button[text()='×'])[1]")
 	private WebElement ToastCloser;
 	
+	@FindBy(xpath="//input[@placeholder='Search']")
+	private WebElement SearchTextBox;
+
+	
+	
 	
 	public boolean vendorPageVerification()
 	{
@@ -154,6 +159,26 @@ public class VendorPage extends VendorModuleTest{
 		}
 		
 	}
+	public boolean editVendorWithoutUpdated(String name,String email,String mobile,
+			String vendorType,String gstinNumber,String address) throws Exception
+	{
+		if(Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+name+"')]"))
+		{
+			Utilitymethods.elementclick(driver.findElement(By.xpath("//td[contains(text(),'"+name+"')]/following-sibling::td/a/i[contains(@class,'edit')]")));
+			Utilitymethods.waitForElementDisplayed(NewVendorHeader);
+			Utilitymethods.elementclick(VendorUpdateButton);
+			Utilitymethods.isElementDisplayed(SuccessToastMessageForVendorUpdated);
+			Utilitymethods.checkColor(SuccessToastDivForVendorUpdated,"#51a351","Vender added Success Toast");
+			Utilitymethods.elementclick(ToastCloser);
+			return Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+name+"')]/following-sibling::td[text()='"+email+"']/following-sibling::td[text()='"+mobile+"']/following-sibling::td[text()='"+vendorType+"']/following-sibling::td[text()='"+gstinNumber+"']/following-sibling::td[text()='"+address+"']");
+		}
+		else 
+		{
+			AppLogger.logger.info(name+" named vendor doesnot exist.");
+			return false;
+		}
+	}
+	
 	public boolean deleteVendor(String existingVendorName) throws Exception
 	{
 		if(Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+existingVendorName+"')]"))
@@ -221,7 +246,20 @@ public class VendorPage extends VendorModuleTest{
 		
 	}
 	
+	public boolean addVendorWithoutData() throws Exception
+	{
+		Utilitymethods.elementclick(AddVendorButton);
+		Utilitymethods.waitForElementDisplayed(NewVendorHeader);
+		return NewVendorSaveButton.isEnabled();
+	}
 	
+	public boolean searchVendor(String name) throws Exception
+	{
+		Utilitymethods.enterText(SearchTextBox, name);
+		Utilitymethods.DelayBy(2);
+		return Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+name+"')]");
+		
+	}
 	
 	
 	

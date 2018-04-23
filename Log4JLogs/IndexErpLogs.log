@@ -1307,3 +1307,125 @@
 2018-04-21 00:34:54 [main] INFO  AppLogger:115 - Logout Successful
 2018-04-21 00:34:56 [main] INFO  AppLogger:125 - ================LogEnded=================
 2018-04-21 00:34:58 [main] INFO  AppLogger:133 - Email sent Successfully
+2018-04-23 12:20:28 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-23 12:21:24 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-23 12:21:33 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 12:21:35 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 12:22:25 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-23 12:22:25 [main] INFO  AppLogger:91 - A_Vendor_6 test is Passed.
+2018-04-23 12:22:28 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 12:22:30 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 12:23:20 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-23 12:23:20 [main] INFO  AppLogger:91 - A_Vendor_6 test is Passed.
+2018-04-23 12:23:30 [main] INFO  AppLogger:115 - Logout Successful
+2018-04-23 12:23:32 [main] INFO  AppLogger:125 - ================LogEnded=================
+2018-04-23 12:23:34 [main] INFO  AppLogger:133 - Email sent Successfully
+2018-04-23 16:32:38 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-23 16:33:36 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-23 16:33:43 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 16:33:45 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 16:33:46 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 16:34:36 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-23 16:34:36 [main] INFO  AppLogger:91 - A_Vendor_7 test is Passed.
+2018-04-23 16:34:47 [main] INFO  AppLogger:115 - Logout Successful
+2018-04-23 16:34:48 [main] INFO  AppLogger:125 - ================LogEnded=================
+2018-04-23 16:34:51 [main] INFO  AppLogger:133 - Email sent Successfully
+2018-04-23 18:29:10 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-23 18:29:57 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-23 18:30:01 [main] INFO  AppLogger:91 - A_Vendor_1 test is Passed.
+2018-04-23 18:30:03 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:30:04 [main] INFO  AppLogger:91 - A_Vendor_2 test is Passed.
+2018-04-23 18:30:06 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:30:06 [main] INFO  AppLogger:91 - A_Vendor_2 test is Passed.
+2018-04-23 18:30:09 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:30:09 [main] INFO  AppLogger:91 - A_Vendor_3 test is Passed.
+2018-04-23 18:30:11 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:30:12 [main] INFO  AppLogger:91 - A_Vendor_3 test is Passed.
+2018-04-23 18:30:13 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:31:03 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-23 18:31:03 [main] INFO  AppLogger:91 - A_Vendor_4 test is Passed.
+2018-04-23 18:31:04 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:31:55 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-23 18:31:55 [main] INFO  AppLogger:91 - A_Vendor_4 test is Passed.
+2018-04-23 18:31:57 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:31:59 [main] INFO  AppLogger:139 - Vendor Already exist Toast's color is displayed as Expected.
+2018-04-23 18:32:01 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:32:51 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-23 18:32:51 [main] INFO  AppLogger:91 - A_Vendor_5 test is Passed.
+2018-04-23 18:32:53 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:32:55 [main] INFO  AppLogger:139 - Vendor Already exist Toast's color is displayed as Expected.
+2018-04-23 18:32:57 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:33:47 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-23 18:33:47 [main] INFO  AppLogger:91 - A_Vendor_5 test is Passed.
+2018-04-23 18:33:49 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:33:51 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:34:42 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-23 18:34:42 [main] INFO  AppLogger:91 - A_Vendor_6 test is Passed.
+2018-04-23 18:34:44 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:34:46 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:35:36 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-23 18:35:36 [main] INFO  AppLogger:91 - A_Vendor_6 test is Passed.
+2018-04-23 18:35:39 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:35:40 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:35:41 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 18:36:31 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-23 18:36:31 [main] INFO  AppLogger:91 - A_Vendor_7 test is Passed.
+2018-04-23 18:36:32 [main] INFO  AppLogger:91 - A_Vendor_8 test is Passed.
+2018-04-23 18:36:43 [main] INFO  AppLogger:115 - Logout Successful
+2018-04-23 18:36:44 [main] INFO  AppLogger:125 - ================LogEnded=================
+2018-04-23 18:36:46 [main] INFO  AppLogger:133 - Email sent Successfully
+2018-04-23 21:25:24 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-23 21:26:04 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-23 21:26:10 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 21:26:10 [main] INFO  AppLogger:99 - A_Vendor_9 test is FAiled.
+2018-04-23 21:26:20 [main] INFO  AppLogger:115 - Logout Successful
+2018-04-23 21:26:22 [main] INFO  AppLogger:125 - ================LogEnded=================
+2018-04-23 21:26:25 [main] INFO  AppLogger:133 - Email sent Successfully
+2018-04-23 21:26:44 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-23 21:27:23 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-23 21:27:44 [main] INFO  AppLogger:99 - A_Vendor_9 test is FAiled.
+2018-04-23 21:28:18 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-23 21:29:01 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-23 21:29:06 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 21:29:07 [main] INFO  AppLogger:99 - A_Vendor_9 test is FAiled.
+2018-04-23 21:29:17 [main] INFO  AppLogger:115 - Logout Successful
+2018-04-23 21:29:18 [main] INFO  AppLogger:125 - ================LogEnded=================
+2018-04-23 21:29:21 [main] INFO  AppLogger:133 - Email sent Successfully
+2018-04-23 22:04:26 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-23 22:05:03 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-23 22:05:23 [main] INFO  AppLogger:99 - A_Vendor_9 test is FAiled.
+2018-04-23 22:05:30 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-23 22:06:05 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-23 22:06:10 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 22:06:10 [main] INFO  AppLogger:99 - A_Vendor_9 test is FAiled.
+2018-04-23 22:06:20 [main] INFO  AppLogger:115 - Logout Successful
+2018-04-23 22:06:22 [main] INFO  AppLogger:125 - ================LogEnded=================
+2018-04-23 22:06:24 [main] INFO  AppLogger:133 - Email sent Successfully
+2018-04-23 22:58:56 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-23 22:59:43 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-23 23:00:02 [main] INFO  AppLogger:99 - A_Vendor_9 test is FAiled.
+2018-04-23 23:00:15 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-23 23:01:07 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-23 23:01:12 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 23:02:13 [main] INFO  AppLogger:99 - A_Vendor_9 test is FAiled.
+2018-04-23 23:02:23 [main] INFO  AppLogger:115 - Logout Successful
+2018-04-23 23:02:24 [main] INFO  AppLogger:125 - ================LogEnded=================
+2018-04-23 23:02:26 [main] INFO  AppLogger:133 - Email sent Successfully
+2018-04-23 23:08:18 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-23 23:09:01 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-23 23:09:05 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 23:09:08 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 23:09:58 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-23 23:09:58 [main] INFO  AppLogger:91 - A_Vendor_9 test is Passed.
+2018-04-23 23:10:09 [main] INFO  AppLogger:115 - Logout Successful
+2018-04-23 23:10:10 [main] INFO  AppLogger:125 - ================LogEnded=================
+2018-04-23 23:10:13 [main] INFO  AppLogger:133 - Email sent Successfully
+2018-04-23 23:11:01 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-23 23:11:42 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-23 23:11:47 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 23:11:50 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-04-23 23:12:10 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-23 23:12:10 [main] INFO  AppLogger:91 - A_Vendor_9 test is Passed.
+2018-04-23 23:12:21 [main] INFO  AppLogger:115 - Logout Successful
+2018-04-23 23:12:22 [main] INFO  AppLogger:125 - ================LogEnded=================
+2018-04-23 23:12:25 [main] INFO  AppLogger:133 - Email sent Successfully

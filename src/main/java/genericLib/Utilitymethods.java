@@ -17,7 +17,7 @@ import userTest.BaseTest;
 
 public class Utilitymethods extends BaseTest
 {
-	public static WebDriverWait wait = new WebDriverWait(driver,60);
+	public static WebDriverWait wait = new WebDriverWait(driver,20);
 	
 	
 	public static void waitForElementDisplayed(WebElement element) throws Exception

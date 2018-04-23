@@ -14,12 +14,14 @@ import pageObjectRepository.VendorPage;
 import pageObjectRepository.CommonPage;
 
 public class VendorModuleTest extends BaseTest {
+	
+	
 	@Test(enabled=false)
 	public void A_Vendor_1() throws Exception
 	{
-			CommonPage common=new CommonPage();
+		CommonPage common=new CommonPage();
+		VendorPage vendor=new VendorPage();
 			common.goToVendorPage();
-			VendorPage vendor=new VendorPage();
 			try {
 				Assert.assertTrue(vendor.vendorPageVerification());
 			}
@@ -42,9 +44,9 @@ public class VendorModuleTest extends BaseTest {
 				AppLogger.logger.info("A_Vendor_2 test skipped");
 				throw new SkipException("Skipping the Test");
 			}
-			CommonPage common=new CommonPage();
+		CommonPage common=new CommonPage();
+		VendorPage vendor=new VendorPage();
 			common.goToVendorPage();
-			VendorPage vendor=new VendorPage();
 			Assert.assertTrue(vendor.addVendor(data.get("Name"),data.get("Email"),data.get("Mobile"),data.get("VendorType"),data.get("GSTIN Number"),data.get("Address")));
 		
 	}
@@ -60,9 +62,9 @@ public class VendorModuleTest extends BaseTest {
 				AppLogger.logger.info("A_Vendor_3 test skipped");
 				throw new SkipException("Skipping the Test");
 			}
-			CommonPage common=new CommonPage();
+		CommonPage common=new CommonPage();
+		VendorPage vendor=new VendorPage();
 			common.goToVendorPage();
-			VendorPage vendor=new VendorPage();
 			Assert.assertTrue(vendor.editVendor(data.get("ExistingVendorName"),data.get("Name"),data.get("Email"),data.get("Mobile"),data.get("VendorType"),data.get("GSTIN Number"),data.get("Address")));
 		
 	}
@@ -78,9 +80,9 @@ public class VendorModuleTest extends BaseTest {
 				AppLogger.logger.info("A_Vendor_4 test skipped");
 				throw new SkipException("Skipping the Test");
 			}
-			CommonPage common=new CommonPage();
+		CommonPage common=new CommonPage();
+		VendorPage vendor=new VendorPage();
 			common.goToVendorPage();
-			VendorPage vendor=new VendorPage();
 			Assert.assertFalse(vendor.deleteVendor(data.get("ExistingVendorName")));		
 	}
 	
@@ -96,9 +98,9 @@ public class VendorModuleTest extends BaseTest {
 				AppLogger.logger.info("A_Vendor_5 test skipped");
 				throw new SkipException("Skipping the Test");
 			}
-			CommonPage common=new CommonPage();
+		CommonPage common=new CommonPage();
+		VendorPage vendor=new VendorPage();
 			common.goToVendorPage();
-			VendorPage vendor=new VendorPage();
 			Assert.assertTrue(vendor.addDuplicateVendor(data.get("Name"),data.get("Email"),data.get("Mobile"),data.get("VendorType"),data.get("GSTIN Number"),data.get("Address")));
 			Assert.assertFalse(vendor.deleteVendor(data.get("Name")));		
 	}
@@ -106,7 +108,7 @@ public class VendorModuleTest extends BaseTest {
 	public Object[][] A_Vendor_6Testdata(){
 	return DataUtil.getData("A_Vendor_6","Vendor", xls);		
 	}
-	@Test(dataProvider="A_Vendor_6Testdata")
+	@Test(enabled=false,dataProvider="A_Vendor_6Testdata")
 	public void A_Vendor_6(Hashtable<String,String>data) throws Exception
 	{
 		if(data.get("RunMode").equals("N"))
@@ -114,14 +116,60 @@ public class VendorModuleTest extends BaseTest {
 				AppLogger.logger.info("A_Vendor_6 test skipped");
 				throw new SkipException("Skipping the Test");
 			}
-			CommonPage common=new CommonPage();
+		CommonPage common=new CommonPage();
+		VendorPage vendor=new VendorPage();
 			common.goToVendorPage();
-			VendorPage vendor=new VendorPage();
 			Assert.assertTrue(vendor.addVendor(data.get("Name"),data.get("Email"),data.get("Mobile"),data.get("VendorType"),data.get("GSTIN Number"),data.get("Address")));
 			Assert.assertTrue(vendor.CancelOndeleteVendor(data.get("Name")));
 			Assert.assertFalse(vendor.deleteVendor(data.get("Name")));		
 	}
+	@DataProvider
+	public Object[][] A_Vendor_7Testdata(){
+	return DataUtil.getData("A_Vendor_7","Vendor", xls);		
+	}
+	@Test(enabled=false,dataProvider="A_Vendor_7Testdata")
+	public void A_Vendor_7(Hashtable<String,String>data) throws Exception
+	{
+		if(data.get("RunMode").equals("N"))
+			{
+				AppLogger.logger.info("A_Vendor_7 test skipped");
+				throw new SkipException("Skipping the Test");
+			}
+		CommonPage common=new CommonPage();
+		VendorPage vendor=new VendorPage();
+			common.goToVendorPage();
+			Assert.assertTrue(vendor.addVendor(data.get("Name"),data.get("Email"),data.get("Mobile"),data.get("VendorType"),data.get("GSTIN Number"),data.get("Address")));
+			Assert.assertTrue(vendor.editVendorWithoutUpdated(data.get("Name"),data.get("Email"),data.get("Mobile"),data.get("VendorType"),data.get("GSTIN Number"),data.get("Address")));
+			Assert.assertFalse(vendor.deleteVendor(data.get("Name")));		
+	}
 	
-	
+	@Test(enabled=false)
+	public void A_Vendor_8() throws Exception
+	{
+		CommonPage common=new CommonPage();
+		VendorPage vendor=new VendorPage();
+		common.goToVendorPage();
+		Assert.assertFalse(vendor.addVendorWithoutData());
+		
+	}
 
+	@DataProvider
+	public Object[][] A_Vendor_9Testdata(){
+	return DataUtil.getData("A_Vendor_9","Vendor", xls);		
+	}
+	@Test(dataProvider="A_Vendor_9Testdata")
+	public void A_Vendor_9(Hashtable<String,String>data) throws Exception
+	{
+		if(data.get("RunMode").equals("N"))
+			{
+				AppLogger.logger.info("A_Vendor_9 test skipped");
+				throw new SkipException("Skipping the Test");
+			}
+		CommonPage common=new CommonPage();
+		VendorPage vendor=new VendorPage();
+			common.goToVendorPage();
+			Assert.assertTrue(vendor.addVendor(data.get("Name"),data.get("Email"),data.get("Mobile"),data.get("VendorType"),data.get("GSTIN Number"),data.get("Address")));
+			Assert.assertTrue(vendor.searchVendor(data.get("Name")));
+			Assert.assertFalse(vendor.deleteVendor(data.get("Name")));		
+	}
 }

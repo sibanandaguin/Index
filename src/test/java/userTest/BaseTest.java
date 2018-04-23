@@ -50,7 +50,7 @@ public class BaseTest
 			
 			   // For lunching Browser
 			   driver=Browser.getBrowser();
-			   driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
+			   driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 			   driver.manage().deleteAllCookies();
 			   driver.navigate().to(GlobalEntitie.stgurl);
 			   //driver.manage().window().maximize();
