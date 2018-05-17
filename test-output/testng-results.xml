@@ -1,62 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="8" total="9" passed="1">
+<testng-results skipped="1" failed="0" ignored="10" total="11" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="84501" started-at="2018-04-23T17:41:00Z" finished-at="2018-04-23T17:42:25Z">
+  <suite name="Suite" duration-ms="12917" started-at="2018-05-15T18:11:42Z" finished-at="2018-05-15T18:11:55Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="84501" started-at="2018-04-23T17:41:00Z" finished-at="2018-04-23T17:42:25Z">
+    <test name="Test" duration-ms="12917" started-at="2018-05-15T18:11:42Z" finished-at="2018-05-15T18:11:55Z">
       <class name="userTest.VendorModuleTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="setUp" is-config="true" duration-ms="193" started-at="2018-04-23T23:11:00Z" finished-at="2018-04-23T23:11:00Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:userTest.VendorModuleTest@158da8e]" name="setUp" is-config="true" duration-ms="176" started-at="2018-05-15T23:41:42Z" finished-at="2018-05-15T23:41:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="primarySetup()[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="primarySetup" is-config="true" duration-ms="41575" started-at="2018-04-23T23:11:00Z" finished-at="2018-04-23T23:11:42Z">
+        <test-method status="FAIL" signature="primarySetup()[pri:0, instance:userTest.VendorModuleTest@158da8e]" name="primarySetup" is-config="true" duration-ms="12673" started-at="2018-05-15T23:41:42Z" finished-at="2018-05-15T23:41:55Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Process unexpectedly closed with status 0Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'TSLC1124', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'Driver info: driver.version: FirefoxDriverremote stacktrace: ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Process unexpectedly closed with status 0Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'TSLC1124', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'Driver info: driver.version: FirefoxDriverremote stacktrace: at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.lang.reflect.Constructor.newInstance(Constructor.java:423)at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)at genericLib.Browser.getBrowser(Browser.java:24)at userTest.BaseTest.primarySetup(BaseTest.java:55)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:498)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:163)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- primarySetup -->
-        <test-method status="PASS" signature="register(java.lang.reflect.Method)[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="register" is-config="true" duration-ms="3" started-at="2018-04-23T23:11:42Z" finished-at="2018-04-23T23:11:42Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void userTest.VendorModuleTest.A_Vendor_9(java.util.Hashtable) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="register(java.lang.reflect.Method)[pri:0, instance:userTest.VendorModuleTest@158da8e]" name="register" is-config="true" duration-ms="0" started-at="2018-05-15T23:41:55Z" finished-at="2018-05-15T23:41:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- register -->
-        <test-method status="PASS" signature="A_Vendor_9(java.util.Hashtable)[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="A_Vendor_9" duration-ms="28268" started-at="2018-04-23T23:11:42Z" data-provider="A_Vendor_9Testdata" finished-at="2018-04-23T23:12:10Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Name=David Miller, Mobile=8971909093, RunMode=Y, GSTIN Number=29BGIPG9703P1Z9, VendorType=Outer State, RowNum=37, Email=davidmiller@gmail.com, Address=JP Nagar 8th Phase}]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="A_Vendor_11(java.util.Hashtable)[pri:0, instance:userTest.VendorModuleTest@158da8e]" name="A_Vendor_11" duration-ms="0" started-at="2018-05-15T23:41:55Z" data-provider="A_Vendor_11Testdata" finished-at="2018-05-15T23:41:55Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Process unexpectedly closed with status 0Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'TSLC1124', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'Driver info: driver.version: FirefoxDriverremote stacktrace: ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Process unexpectedly closed with status 0Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'TSLC1124', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'Driver info: driver.version: FirefoxDriverremote stacktrace: at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.lang.reflect.Constructor.newInstance(Constructor.java:423)at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)at genericLib.Browser.getBrowser(Browser.java:24)at userTest.BaseTest.primarySetup(BaseTest.java:55)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:498)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:163)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- A_Vendor_9 -->
-        <test-method status="PASS" signature="captureStatus(org.testng.ITestResult)[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="captureStatus" is-config="true" duration-ms="7" started-at="2018-04-23T23:12:10Z" finished-at="2018-04-23T23:12:10Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=A_Vendor_9 status=SUCCESS method=VendorModuleTest.A_Vendor_9(java.util.Hashtable)[pri:0, instance:userTest.VendorModuleTest@6aba2b86] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- A_Vendor_11 -->
+        <test-method status="SKIP" signature="captureStatus(org.testng.ITestResult)[pri:0, instance:userTest.VendorModuleTest@158da8e]" name="captureStatus" is-config="true" duration-ms="0" started-at="2018-05-15T23:41:55Z" finished-at="2018-05-15T23:41:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureStatus -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="closeBrowser" is-config="true" duration-ms="11980" started-at="2018-04-23T23:12:10Z" finished-at="2018-04-23T23:12:22Z">
+        <test-method status="SKIP" signature="closeBrowser()[pri:0, instance:userTest.VendorModuleTest@158da8e]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2018-05-15T23:41:55Z" finished-at="2018-05-15T23:41:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="generateReport()[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="generateReport" is-config="true" duration-ms="2432" started-at="2018-04-23T23:12:22Z" finished-at="2018-04-23T23:12:25Z">
+        <test-method status="SKIP" signature="generateReport()[pri:0, instance:userTest.VendorModuleTest@158da8e]" name="generateReport" is-config="true" duration-ms="0" started-at="2018-05-15T23:41:55Z" finished-at="2018-05-15T23:41:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-        <test-method status="PASS" signature="afterSuit()[pri:0, instance:userTest.VendorModuleTest@6aba2b86]" name="afterSuit" is-config="true" duration-ms="1" started-at="2018-04-23T23:12:25Z" finished-at="2018-04-23T23:12:25Z">
+        <test-method status="SKIP" signature="afterSuit()[pri:0, instance:userTest.VendorModuleTest@158da8e]" name="afterSuit" is-config="true" duration-ms="0" started-at="2018-05-15T23:41:55Z" finished-at="2018-05-15T23:41:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuit -->

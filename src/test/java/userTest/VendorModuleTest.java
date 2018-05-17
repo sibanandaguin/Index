@@ -13,7 +13,8 @@ import genericLib.DataUtil;
 import pageObjectRepository.VendorPage;
 import pageObjectRepository.CommonPage;
 
-public class VendorModuleTest extends BaseTest {
+public class VendorModuleTest extends BaseTest{
+	
 	
 	
 	@Test(enabled=false)
@@ -22,16 +23,10 @@ public class VendorModuleTest extends BaseTest {
 		CommonPage common=new CommonPage();
 		VendorPage vendor=new VendorPage();
 			common.goToVendorPage();
-			try {
-				Assert.assertTrue(vendor.vendorPageVerification());
-			}
-			catch(Exception ex)
-			{
-				Assert.assertTrue(false);
-			}
+			Assert.assertTrue(vendor.vendorPageVerification());
 			
 	}
-	
+
 	@DataProvider
 	public Object[][] A_Vendor_2Testdata(){
 	return DataUtil.getData("A_Vendor_2","Vendor", xls);		
@@ -157,7 +152,7 @@ public class VendorModuleTest extends BaseTest {
 	public Object[][] A_Vendor_9Testdata(){
 	return DataUtil.getData("A_Vendor_9","Vendor", xls);		
 	}
-	@Test(dataProvider="A_Vendor_9Testdata")
+	@Test(enabled=false,dataProvider="A_Vendor_9Testdata")
 	public void A_Vendor_9(Hashtable<String,String>data) throws Exception
 	{
 		if(data.get("RunMode").equals("N"))
@@ -171,5 +166,41 @@ public class VendorModuleTest extends BaseTest {
 			Assert.assertTrue(vendor.addVendor(data.get("Name"),data.get("Email"),data.get("Mobile"),data.get("VendorType"),data.get("GSTIN Number"),data.get("Address")));
 			Assert.assertTrue(vendor.searchVendor(data.get("Name")));
 			Assert.assertFalse(vendor.deleteVendor(data.get("Name")));		
+	}
+	@DataProvider
+	public Object[][] A_Vendor_10Testdata(){
+	return DataUtil.getData("A_Vendor_10","Vendor", xls);		
+	}
+	@Test(enabled=false,dataProvider="A_Vendor_10Testdata")
+	public void A_Vendor_10(Hashtable<String,String>data) throws Exception
+	{
+		if(data.get("RunMode").equals("N"))
+			{
+				AppLogger.logger.info("A_Vendor_10 test skipped");
+				throw new SkipException("Skipping the Test");
+			}
+		CommonPage common=new CommonPage();
+		VendorPage vendor=new VendorPage();
+			common.goToVendorPage();
+			Assert.assertFalse(vendor.searchVendor(data.get("Name")));
+				
+	}
+	@DataProvider
+	public Object[][] A_Vendor_11Testdata(){
+	return DataUtil.getData("A_Vendor_11","Vendor", xls);		
+	}
+	@Test(dataProvider="A_Vendor_11Testdata")
+	public void A_Vendor_11(Hashtable<String,String>data) throws Exception
+	{
+		if(data.get("RunMode").equals("N"))
+			{
+				AppLogger.logger.info("A_Vendor_11 test skipped");
+				throw new SkipException("Skipping the Test");
+			}
+		CommonPage common=new CommonPage();
+		VendorPage vendor=new VendorPage();
+			common.goToVendorPage();
+			Assert.assertTrue(vendor.addVendor(data.get("Name"),data.get("Email"),data.get("Mobile"),data.get("VendorType"),data.get("GSTIN Number"),data.get("Address")));
+				
 	}
 }

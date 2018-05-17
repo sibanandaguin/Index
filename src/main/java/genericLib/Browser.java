@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-
 import userTest.BaseTest;
 
 public class Browser extends BaseTest {
@@ -24,9 +23,7 @@ public class Browser extends BaseTest {
 		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\Drivers\\geckodriver.exe");
 		driver = new FirefoxDriver(); 
 	}
-	return driver;
-		
+	return driver;		
 }
-
 
 }

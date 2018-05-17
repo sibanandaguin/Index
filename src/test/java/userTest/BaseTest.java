@@ -2,7 +2,9 @@ package userTest;
 
 import java.io.File;
 import java.lang.reflect.Method;
+
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.SkipException;
@@ -29,6 +31,7 @@ import genericLib.Utilitymethods;
 import genericLib.ExcelLib;
 import pageObjectRepository.CommonPage;
 import pageObjectRepository.LoginPage;
+import pageObjectRepository.VendorPage;
 
 public class BaseTest
 {
@@ -44,13 +47,13 @@ public class BaseTest
 		
 		@BeforeClass
 		//Before class contain lunching browser,extent report setup,login
-		public void primarySetup() 
+		public void primarySetup() throws Exception 
 		{
 			AppLogger.logger.info("================LogStarted=================");
 			
 			   // For lunching Browser
 			   driver=Browser.getBrowser();
-			   driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+			   driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 			   driver.manage().deleteAllCookies();
 			   driver.navigate().to(GlobalEntitie.stgurl);
 			   //driver.manage().window().maximize();
@@ -64,6 +67,7 @@ public class BaseTest
 		@BeforeMethod
 		public void register(Method method)
 		{
+			
 			String testName =method.getName();
 			test=reports.createTest(testName);
 		}

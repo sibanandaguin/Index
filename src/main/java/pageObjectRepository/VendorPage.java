@@ -19,6 +19,11 @@ public class VendorPage extends VendorModuleTest{
 	@FindBy(xpath="//button[@ng-click='venCtrl.addVendor()']")
 	private WebElement AddVendorButton;
 	
+	@FindBy(xpath="(//i[@class='fa fa-credit-card text-success'])[2]")
+	private WebElement VendorCardSymbol;
+	
+	@FindBy(xpath="//b[contains(text(),'Please Click on ')]")
+	private WebElement VendorCardInfobox;
 	
 	@FindBy(xpath="//input[@placeholder='Search']")
 	private WebElement VenderSearchField;
@@ -101,7 +106,14 @@ public class VendorPage extends VendorModuleTest{
 	
 	@FindBy(xpath="//input[@placeholder='Search']")
 	private WebElement SearchTextBox;
+	
+	@FindBy(xpath="//b[text()='VENDOR CREDIT/DEBIT']")
+	private WebElement VendorDeditCreditHeader;
+	
+	@FindBy(xpath="//th[text()='Date']/following-sibling::th[text()='Invoice No']/following-sibling::th[text()='CGST']/following-sibling::th[text()='SGST']/following-sibling::th[text()='IGST']/following-sibling::th[text()='Total Amount']")
+	private WebElement CreditDebitGridHeader;
 
+	
 	
 	
 	
@@ -111,6 +123,8 @@ public class VendorPage extends VendorModuleTest{
 		Utilitymethods.isElementDisplayed(VenderSearchField);
 		Utilitymethods.isElementDisplayed(VenderGridColumn);
 		Utilitymethods.isElementDisplayed(VendorPageMarker);
+		Utilitymethods.isElementDisplayed(VendorCardSymbol);
+		Utilitymethods.isElementDisplayed(VendorCardInfobox);
 		return true;
 		
 	}
@@ -128,7 +142,7 @@ public class VendorPage extends VendorModuleTest{
 		Utilitymethods.isElementDisplayed(SuccessToastMessageForVendorAdded);
 		Utilitymethods.checkColor(SuccessToastDivForVendorAdded,"#51a351","Vender added Success Toast");
 		Utilitymethods.elementclick(ToastCloser);
-		return Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+name+"')]/following-sibling::td[text()='"+email+"']/following-sibling::td[text()='"+mobile+"']/following-sibling::td[text()='"+vendorType+"']/following-sibling::td[text()='"+gstinNumber+"']/following-sibling::td[text()='"+address+"']");
+		return Utilitymethods.isElementDisplayed("//td[contains(text(),'"+name+"')]/following-sibling::td[text()='"+email+"']/following-sibling::td[text()='"+mobile+"']/following-sibling::td[text()='"+vendorType+"']/following-sibling::td[text()='"+gstinNumber+"']/following-sibling::td[text()='"+address+"']");
 		
 	}
 	
@@ -137,9 +151,9 @@ public class VendorPage extends VendorModuleTest{
 			String vendorType,String gstinNumber,String address) throws Exception
 	{
 	
-		if(Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+existingVendorName+"')]"))
+		if(Utilitymethods.isElementDisplayed("//td[contains(text(),'"+existingVendorName+"')]"))
 		{
-			Utilitymethods.elementclick(driver.findElement(By.xpath("//td[contains(text(),'"+existingVendorName+"')]/following-sibling::td/a/i[contains(@class,'edit')]")));
+			Utilitymethods.elementclick("//td[contains(text(),'"+existingVendorName+"')]/following-sibling::td/a/i[contains(@class,'edit')]");
 			Utilitymethods.waitForElementDisplayed(NewVendorHeader);
 			Utilitymethods.enterText(NameField,name);
 			Utilitymethods.enterText(EmailField,email);
@@ -151,7 +165,7 @@ public class VendorPage extends VendorModuleTest{
 			Utilitymethods.isElementDisplayed(SuccessToastMessageForVendorUpdated);
 			Utilitymethods.checkColor(SuccessToastDivForVendorUpdated,"#51a351","Vender added Success Toast");
 			Utilitymethods.elementclick(ToastCloser);
-			return Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+name+"')]/following-sibling::td[text()='"+email+"']/following-sibling::td[text()='"+mobile+"']/following-sibling::td[text()='"+vendorType+"']/following-sibling::td[text()='"+gstinNumber+"']/following-sibling::td[text()='"+address+"']");
+			return Utilitymethods.isElementDisplayed("//td[contains(text(),'"+name+"')]/following-sibling::td[text()='"+email+"']/following-sibling::td[text()='"+mobile+"']/following-sibling::td[text()='"+vendorType+"']/following-sibling::td[text()='"+gstinNumber+"']/following-sibling::td[text()='"+address+"']");
 		}
 		else {
 			AppLogger.logger.info(existingVendorName+" named vendor doesnot exist.");
@@ -162,15 +176,15 @@ public class VendorPage extends VendorModuleTest{
 	public boolean editVendorWithoutUpdated(String name,String email,String mobile,
 			String vendorType,String gstinNumber,String address) throws Exception
 	{
-		if(Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+name+"')]"))
+		if(Utilitymethods.isElementDisplayed("//td[contains(text(),'"+name+"')]"))
 		{
-			Utilitymethods.elementclick(driver.findElement(By.xpath("//td[contains(text(),'"+name+"')]/following-sibling::td/a/i[contains(@class,'edit')]")));
+			Utilitymethods.elementclick("//td[contains(text(),'"+name+"')]/following-sibling::td/a/i[contains(@class,'edit')]");
 			Utilitymethods.waitForElementDisplayed(NewVendorHeader);
 			Utilitymethods.elementclick(VendorUpdateButton);
 			Utilitymethods.isElementDisplayed(SuccessToastMessageForVendorUpdated);
 			Utilitymethods.checkColor(SuccessToastDivForVendorUpdated,"#51a351","Vender added Success Toast");
 			Utilitymethods.elementclick(ToastCloser);
-			return Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+name+"')]/following-sibling::td[text()='"+email+"']/following-sibling::td[text()='"+mobile+"']/following-sibling::td[text()='"+vendorType+"']/following-sibling::td[text()='"+gstinNumber+"']/following-sibling::td[text()='"+address+"']");
+			return Utilitymethods.isElementDisplayed("//td[contains(text(),'"+name+"')]/following-sibling::td[text()='"+email+"']/following-sibling::td[text()='"+mobile+"']/following-sibling::td[text()='"+vendorType+"']/following-sibling::td[text()='"+gstinNumber+"']/following-sibling::td[text()='"+address+"']");
 		}
 		else 
 		{
@@ -181,16 +195,16 @@ public class VendorPage extends VendorModuleTest{
 	
 	public boolean deleteVendor(String existingVendorName) throws Exception
 	{
-		if(Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+existingVendorName+"')]"))
+		if(Utilitymethods.isElementDisplayed("//td[contains(text(),'"+existingVendorName+"')]"))
 		{
-			Utilitymethods.elementclick(driver.findElement(By.xpath("//td[contains(text(),'"+existingVendorName+"')]/following-sibling::td/a[contains(@ng-click,'delete')]")));
+			Utilitymethods.elementclick("//td[contains(text(),'"+existingVendorName+"')]/following-sibling::td/a[contains(@ng-click,'delete')]");
 			Utilitymethods.waitForElementDisplayed(VendorConfirmDialogHeader);
 			Utilitymethods.waitForElementDisplayed(DeleteVendorConfirmMessage);
 			Utilitymethods.elementclick(VendorDeleteOKButton);
 			Utilitymethods.isElementDisplayed(VendorDeletedSusseccToast);
 			Utilitymethods.checkColor(VendorDeletedSusseccToastDiv,"#51a351","Vender added Success Toast");
 			Utilitymethods.elementclick(ToastCloser);
-			return Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+existingVendorName+"')]");
+			return Utilitymethods.isElementDisplayed("//td[contains(text(),'"+existingVendorName+"')]");
 		}
 		else {
 			AppLogger.logger.info(existingVendorName+" named vendor doesnot exist.");
@@ -200,13 +214,13 @@ public class VendorPage extends VendorModuleTest{
 	}
 	public boolean CancelOndeleteVendor(String existingVendorName) throws Exception
 	{
-		if(Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+existingVendorName+"')]"))
+		if(Utilitymethods.isElementDisplayed("//td[contains(text(),'"+existingVendorName+"')]"))
 		{
 			Utilitymethods.elementclick(driver.findElement(By.xpath("//td[contains(text(),'"+existingVendorName+"')]/following-sibling::td/a[contains(@ng-click,'delete')]")));
 			Utilitymethods.waitForElementDisplayed(VendorConfirmDialogHeader);
 			Utilitymethods.waitForElementDisplayed(DeleteVendorConfirmMessage);
 			Utilitymethods.elementclick(VendorDeleteCancelButton);
-			return Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+existingVendorName+"')]");
+			return Utilitymethods.isElementDisplayed("//td[contains(text(),'"+existingVendorName+"')]");
 		}
 		else {
 			AppLogger.logger.info(existingVendorName+" named vendor doesnot exist.");
@@ -229,7 +243,7 @@ public class VendorPage extends VendorModuleTest{
 		Utilitymethods.isElementDisplayed(SuccessToastMessageForVendorAdded);
 		Utilitymethods.checkColor(SuccessToastDivForVendorAdded,"#51a351","Vender added Success Toast");
 		Utilitymethods.elementclick(ToastCloser);
-		Utilitymethods.waitForElementDisplayed(driver,"//td[contains(text(),'"+name+"')]/following-sibling::td[text()='"+email+"']/following-sibling::td[text()='"+mobile+"']/following-sibling::td[text()='"+vendorType+"']/following-sibling::td[text()='"+gstinNumber+"']/following-sibling::td[text()='"+address+"']");
+		Utilitymethods.waitForElementDisplayed("//td[contains(text(),'"+name+"')]/following-sibling::td[text()='"+email+"']/following-sibling::td[text()='"+mobile+"']/following-sibling::td[text()='"+vendorType+"']/following-sibling::td[text()='"+gstinNumber+"']/following-sibling::td[text()='"+address+"']");
 		Utilitymethods.elementclick(AddVendorButton);
 		Utilitymethods.waitForElementDisplayed(NewVendorHeader);
 		Utilitymethods.enterText(NameField,name);
@@ -257,10 +271,18 @@ public class VendorPage extends VendorModuleTest{
 	{
 		Utilitymethods.enterText(SearchTextBox, name);
 		Utilitymethods.DelayBy(2);
-		return Utilitymethods.isElementDisplayed(driver,"//td[contains(text(),'"+name+"')]");
+		return Utilitymethods.isElementDisplayed("//td[contains(text(),'"+name+"')]");
 		
 	}
 	
+	public boolean verifyVendorCreditDebitDialog(String vendorName, String GSTINnumber) throws Exception
+	{
+		Utilitymethods.elementclick("//td[text()='"+GSTINnumber+"']/preceding-sibling::td/a");
+		Utilitymethods.waitForElementDisplayed(VendorDeditCreditHeader);
+		Utilitymethods.isElementDisplayed("//b[text()='"+vendorName+"']");
+		Utilitymethods.isElementDisplayed(CreditDebitGridHeader);
+		return true;
+	}
 	
 	
 	

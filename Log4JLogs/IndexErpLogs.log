@@ -1429,3 +1429,56 @@
 2018-04-23 23:12:21 [main] INFO  AppLogger:115 - Logout Successful
 2018-04-23 23:12:22 [main] INFO  AppLogger:125 - ================LogEnded=================
 2018-04-23 23:12:25 [main] INFO  AppLogger:133 - Email sent Successfully
+2018-04-30 23:32:53 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-30 23:33:53 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-30 23:34:21 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-30 23:34:21 [main] INFO  AppLogger:92 - A_Vendor_10 test is Passed.
+2018-04-30 23:34:31 [main] INFO  AppLogger:116 - Logout Successful
+2018-04-30 23:34:34 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-04-30 23:34:37 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-04-30 23:39:32 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-30 23:40:24 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-30 23:40:50 [main] INFO  AppLogger:100 - A_Vendor_10 test is FAiled.
+2018-04-30 23:41:15 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-04-30 23:42:03 [main] INFO  AppLogger:61 - Login Successful.
+2018-04-30 23:42:28 [main] INFO  AppLogger:58 - Element does not Exist in the WebPage.
+2018-04-30 23:42:28 [main] INFO  AppLogger:92 - A_Vendor_10 test is Passed.
+2018-04-30 23:42:38 [main] INFO  AppLogger:116 - Logout Successful
+2018-04-30 23:42:40 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-04-30 23:42:42 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-05-01 00:21:39 [main] INFO  AppLogger:49 - ================LogStarted=================
+2018-05-01 00:22:29 [main] INFO  AppLogger:61 - Login Successful.
+2018-05-01 00:22:35 [main] INFO  AppLogger:139 - Vender added Success Toast's color is displayed as Expected.
+2018-05-01 00:22:35 [main] INFO  AppLogger:92 - A_Vendor_11 test is Passed.
+2018-05-01 00:22:46 [main] INFO  AppLogger:116 - Logout Successful
+2018-05-01 00:22:48 [main] INFO  AppLogger:126 - ================LogEnded=================
+2018-05-01 00:22:50 [main] INFO  AppLogger:134 - Email sent Successfully
+2018-05-02 23:36:35 [main] INFO  AppLogger:53 - ================LogStarted=================
+2018-05-02 23:39:55 [main] INFO  AppLogger:53 - ================LogStarted=================
+2018-05-03 00:06:59 [main] INFO  AppLogger:55 - ================LogStarted=================
+2018-05-03 00:07:53 [main] INFO  AppLogger:55 - ================LogStarted=================
+2018-05-03 00:11:44 [main] INFO  AppLogger:55 - ================LogStarted=================
+2018-05-03 00:12:14 [main] INFO  AppLogger:55 - ================LogStarted=================
+2018-05-03 00:14:42 [main] INFO  AppLogger:55 - ================LogStarted=================
+2018-05-03 00:15:25 [main] INFO  AppLogger:67 - Login Successful.
+2018-05-03 00:17:30 [main] INFO  AppLogger:106 - A_Vendor_11 test is FAiled.
+2018-05-03 00:17:41 [main] INFO  AppLogger:122 - Logout Successful
+2018-05-03 00:17:42 [main] INFO  AppLogger:132 - ================LogEnded=================
+2018-05-03 00:17:45 [main] INFO  AppLogger:140 - Email sent Successfully
+2018-05-06 13:50:09 [main] INFO  AppLogger:52 - ================LogStarted=================
+2018-05-06 13:50:59 [main] INFO  AppLogger:64 - Login Successful.
+2018-05-06 13:51:05 [main] INFO  AppLogger:145 - Vender added Success Toast's color is displayed as Expected.
+2018-05-06 13:51:06 [main] INFO  AppLogger:95 - A_Vendor_11 test is Passed.
+2018-05-06 13:51:16 [main] INFO  AppLogger:119 - Logout Successful
+2018-05-06 13:51:18 [main] INFO  AppLogger:129 - ================LogEnded=================
+2018-05-06 13:51:21 [main] INFO  AppLogger:137 - Email sent Successfully
+2018-05-15 01:22:04 [main] INFO  AppLogger:52 - ================LogStarted=================
+2018-05-15 01:23:08 [main] INFO  AppLogger:64 - Login Successful.
+2018-05-15 23:35:23 [main] INFO  AppLogger:52 - ================LogStarted=================
+2018-05-15 23:36:13 [main] INFO  AppLogger:64 - Login Successful.
+2018-05-15 23:41:43 [main] INFO  AppLogger:52 - ================LogStarted=================
+2018-05-15 23:42:14 [main] INFO  AppLogger:52 - ================LogStarted=================
+2018-05-15 23:42:58 [main] INFO  AppLogger:64 - Login Successful.
+2018-05-16 00:50:26 [main] INFO  AppLogger:52 - ================LogStarted=================
+2018-05-16 00:51:11 [main] INFO  AppLogger:64 - Login Successful.
+2018-05-16 00:52:08 [main] INFO  AppLogger:103 - A_Vendor_11 test is FAiled.

@@ -235,7 +235,7 @@ public class CategoryPage extends CategoryModuleTest{
 		Utilitymethods.elementclick(NewCategoryAddButton);
 		Utilitymethods.elementclick(AddItemButton);
 		Utilitymethods.enterText(SearchCategoryField,categoryName);
-		Utilitymethods.isElementDisplayed(driver,"//strong[text()='"+categoryName+"']");
+		Utilitymethods.isElementDisplayed("//strong[text()='"+categoryName+"']");
 		
 	}
 	}

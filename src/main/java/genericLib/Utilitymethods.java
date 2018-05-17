@@ -1,7 +1,6 @@
 package genericLib;
 
 import java.io.File;
-import java.util.NoSuchElementException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -35,12 +34,13 @@ public class Utilitymethods extends BaseTest
             }  
 		}
 	}
-	public static void waitForElementDisplayed(WebDriver driver,String Xpath) throws Exception
+	
+	public static void waitForElementDisplayed(String xpath) throws Exception
 	{
 		for(int i=0;i<10;i++)
 		{
             try{
-                driver.findElement(By.xpath(Xpath)).isDisplayed();
+                driver.findElement(By.xpath(xpath)).isDisplayed();
                 break;
             }
             catch(Exception e)
@@ -50,7 +50,8 @@ public class Utilitymethods extends BaseTest
             }  
 		}
 	}
-	public static boolean isElementDisplayed(WebDriver driver,String xpath)
+	
+	public static boolean isElementDisplayed(String xpath)
 	{
 		int count=driver.findElements(By.xpath(xpath)).size();
 		if(count==0)
@@ -96,6 +97,13 @@ public class Utilitymethods extends BaseTest
 	//Static method to click an element
 	public static void elementclick(WebElement element)
 	{
+		waitForClickable(element);
+		element.click();
+		
+	}
+	public static void elementclick(String xpath)
+	{
+		WebElement element=driver.findElement(By.xpath(xpath));
 		waitForClickable(element);
 		element.click();
 		

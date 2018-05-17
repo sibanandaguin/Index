@@ -10,9 +10,9 @@
           <include name="primarySetup"/>
           <include name="closeBrowser"/>
           <include name="captureStatus"/>
+          <include name="A_Vendor_11"/>
           <include name="afterSuit"/>
           <include name="setUp"/>
-          <include name="A_Vendor_9" invocation-numbers="0"/>
         </methods>
       </class> <!-- userTest.VendorModuleTest -->
     </classes>
