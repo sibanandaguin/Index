@@ -31,7 +31,7 @@ public class VendorModuleTest extends BaseTest{
 	public Object[][] A_Vendor_2Testdata(){
 	return DataUtil.getData("A_Vendor_2","Vendor", xls);		
 	}
-	@Test(enabled=false,dataProvider="A_Vendor_2Testdata")
+	@Test(dataProvider="A_Vendor_2Testdata")
 	public void A_Vendor_2(Hashtable<String,String>data) throws Exception
 	{
 		if(data.get("RunMode").equals("N"))
@@ -49,7 +49,7 @@ public class VendorModuleTest extends BaseTest{
 	public Object[][] A_Vendor_3Testdata(){
 	return DataUtil.getData("A_Vendor_3","Vendor", xls);		
 	}
-	@Test(enabled=false,dataProvider="A_Vendor_3Testdata")
+	@Test(dataProvider="A_Vendor_3Testdata")
 	public void A_Vendor_3(Hashtable<String,String>data) throws Exception
 	{
 		if(data.get("RunMode").equals("N"))
@@ -67,7 +67,7 @@ public class VendorModuleTest extends BaseTest{
 	public Object[][] A_Vendor_4Testdata(){
 	return DataUtil.getData("A_Vendor_4","Vendor", xls);		
 	}
-	@Test(enabled=false,dataProvider="A_Vendor_4Testdata")
+	@Test(dataProvider="A_Vendor_4Testdata")
 	public void A_Vendor_4(Hashtable<String,String>data) throws Exception
 	{
 		if(data.get("RunMode").equals("N"))
@@ -85,7 +85,7 @@ public class VendorModuleTest extends BaseTest{
 	public Object[][] A_Vendor_5Testdata(){
 	return DataUtil.getData("A_Vendor_5","Vendor", xls);		
 	}
-	@Test(enabled=false,dataProvider="A_Vendor_5Testdata")
+	@Test(dataProvider="A_Vendor_5Testdata")
 	public void A_Vendor_5(Hashtable<String,String>data) throws Exception
 	{
 		if(data.get("RunMode").equals("N"))
@@ -103,7 +103,7 @@ public class VendorModuleTest extends BaseTest{
 	public Object[][] A_Vendor_6Testdata(){
 	return DataUtil.getData("A_Vendor_6","Vendor", xls);		
 	}
-	@Test(enabled=false,dataProvider="A_Vendor_6Testdata")
+	@Test(dataProvider="A_Vendor_6Testdata")
 	public void A_Vendor_6(Hashtable<String,String>data) throws Exception
 	{
 		if(data.get("RunMode").equals("N"))
@@ -122,7 +122,7 @@ public class VendorModuleTest extends BaseTest{
 	public Object[][] A_Vendor_7Testdata(){
 	return DataUtil.getData("A_Vendor_7","Vendor", xls);		
 	}
-	@Test(enabled=false,dataProvider="A_Vendor_7Testdata")
+	@Test(dataProvider="A_Vendor_7Testdata")
 	public void A_Vendor_7(Hashtable<String,String>data) throws Exception
 	{
 		if(data.get("RunMode").equals("N"))
@@ -138,7 +138,7 @@ public class VendorModuleTest extends BaseTest{
 			Assert.assertFalse(vendor.deleteVendor(data.get("Name")));		
 	}
 	
-	@Test(enabled=false)
+	@Test()
 	public void A_Vendor_8() throws Exception
 	{
 		CommonPage common=new CommonPage();
@@ -152,7 +152,7 @@ public class VendorModuleTest extends BaseTest{
 	public Object[][] A_Vendor_9Testdata(){
 	return DataUtil.getData("A_Vendor_9","Vendor", xls);		
 	}
-	@Test(enabled=false,dataProvider="A_Vendor_9Testdata")
+	@Test(dataProvider="A_Vendor_9Testdata")
 	public void A_Vendor_9(Hashtable<String,String>data) throws Exception
 	{
 		if(data.get("RunMode").equals("N"))
@@ -189,7 +189,7 @@ public class VendorModuleTest extends BaseTest{
 	public Object[][] A_Vendor_11Testdata(){
 	return DataUtil.getData("A_Vendor_11","Vendor", xls);		
 	}
-	@Test(dataProvider="A_Vendor_11Testdata")
+	@Test(enabled=false,dataProvider="A_Vendor_11Testdata")
 	public void A_Vendor_11(Hashtable<String,String>data) throws Exception
 	{
 		if(data.get("RunMode").equals("N"))

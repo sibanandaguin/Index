@@ -3,35 +3,12 @@
   <groupId>IndexErp</groupId>
   <artifactId>IndexErpAutomation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>IndexErpAutomation</name>
-  <url>http://maven.apache.org</url>
   
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <suiteXmlFile>testng.xml</suiteXmlFile>
   </properties>
-  <build>
-  	<plugins>
-  	<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-  	<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.21.0</version>
-        <configuration>
-          <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
-        </configuration>
-      </plugin>
-  	</plugins>
-  </build>
+  
+  
   <dependencies>
   	<dependency>
         <groupId>org.seleniumhq.selenium</groupId>
@@ -75,4 +52,32 @@
     <version>2.6</version>
 </dependency>
  </dependencies>
+ 
+  <build>
+  	<plugins>
+  	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+        <compilerVersion>1.8</compilerVersion>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+  	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.21.0</version>
+        <configuration>
+        
+          <suiteXmlFiles>
+            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+          </suiteXmlFiles>
+          
+        </configuration>
+      </plugin>
+  	</plugins>
+  </build>
+  
 </project>
