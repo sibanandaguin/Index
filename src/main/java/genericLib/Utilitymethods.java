@@ -50,6 +50,14 @@ public class Utilitymethods extends BaseTest
             }  
 		}
 	}
+	public static boolean isenabled(String xpath)
+	{
+		return driver.findElement(By.xpath(xpath)).isEnabled();
+	}
+	public static boolean isenabled(WebElement element)
+	{
+		return element.isEnabled();
+	}
 	
 	public static boolean isElementDisplayed(String xpath)
 	{

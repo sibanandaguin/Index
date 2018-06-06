@@ -148,21 +148,12 @@ public class CategoryPage extends CategoryModuleTest{
 		Utilitymethods.isElementDisplayed(NewCategoryDialogboxCloser);
 		Utilitymethods.isElementDisplayed(CategoryNameLabel);
 		Utilitymethods.isElementDisplayed(CategoryNameField);
-		if(AddButtonInNewCategoryDialog.isDisplayed())
-		{
-			AppLogger.logger.info("Add button is displayed in New CategoryWindow.");
-			if(AddButtonInNewCategoryDialog.isEnabled())
-			{
-				AppLogger.logger.info("Add button is enabled when Category field is empty.");
-			}
-		}else 
-		{
-			AppLogger.logger.info("Add button is disabled when Category field is empty.");	
-		}
+		Utilitymethods.isElementDisplayed(AddButtonInNewCategoryDialog);
+		Utilitymethods.isenabled(AddButtonInNewCategoryDialog);
 		Utilitymethods.enterText(CategoryNameField, categoryName);
-		boolean status=AddButtonInNewCategoryDialog.isEnabled();
+		Utilitymethods.isenabled(AddButtonInNewCategoryDialog);
 		Utilitymethods.elementclick(NewCategoryDialogboxCloser);
-        return status;
+        return true;
 	}
 	public boolean AddcategoryFeature(String categoryName)
 	{
@@ -191,7 +182,7 @@ public class CategoryPage extends CategoryModuleTest{
 		Utilitymethods.elementclick(CancelButton);
 		AppLogger.logger.info("cancel clicked");
 		Utilitymethods.isElementDisplayed(CATEGORYPageMarker);
-		if(driver.findElement(By.xpath("//td[text()='"+categoryName+"']")).isDisplayed())
+		if(Utilitymethods.isElementDisplayed("//td[text()='"+categoryName+"']"))
 		{
 			AppLogger.logger.info("category not deleted.");
 		}
@@ -199,8 +190,7 @@ public class CategoryPage extends CategoryModuleTest{
 		{
 			AppLogger.logger.info("category deleted.");
 		}
-		WebElement categorydelete=driver.findElement(By.xpath("//td[text()='"+categoryName+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']"));
-		Utilitymethods.elementclick(categorydelete);
+		Utilitymethods.elementclick("//td[text()='"+categoryName+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']");
 		Utilitymethods.waitForClickable(OKButton);
 		Utilitymethods.elementclick(OKButton);
 		AppLogger.logger.info("now category deleted");
@@ -210,7 +200,7 @@ public class CategoryPage extends CategoryModuleTest{
 	}
 	public boolean DeleteCategoryfeature(String categoryName)
 	{
-		Utilitymethods.elementclick(driver.findElement(By.xpath("//td[text()='"+categoryName+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']")));
+		Utilitymethods.elementclick("//td[text()='"+categoryName+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']");
 		Utilitymethods.isElementDisplayed(DeleteConfirmHeader);
 		Utilitymethods.isElementDisplayed(Deletedialogboxmessage);
 		Utilitymethods.isElementDisplayed(CATEGORYPageMarker);
@@ -223,7 +213,7 @@ public class CategoryPage extends CategoryModuleTest{
 	public boolean SearchCategory(String categoryname) throws Exception
 	{
 		Utilitymethods.enterText(SearchButtonCategoryPage,categoryname);
-		if(driver.findElement(By.xpath("//td[text()='"+categoryname+"']")).isDisplayed())
+		if(Utilitymethods.isElementDisplayed("//td[text()='"+categoryname+"']"))
 		{
 			AppLogger.logger.info("Category dispalyed Successfully");
 		}
@@ -231,8 +221,7 @@ public class CategoryPage extends CategoryModuleTest{
 		{
 			AppLogger.logger.info("Category not dispalyed in category table");
 		}
-		WebElement category=driver.findElement(By.xpath("//td[text()='"+categoryname+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']"));
-		Utilitymethods.elementclick(category);
+		Utilitymethods.elementclick("//td[text()='"+categoryname+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']");
 		Utilitymethods.elementclick(OKButton);
 		Utilitymethods.DelayBy(2);
 		Utilitymethods.enterText(SearchButtonCategoryPage,categoryname);
