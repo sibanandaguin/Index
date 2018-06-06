@@ -1,12 +1,12 @@
 package pageObjectRepository;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import genericLib.AppLogger;
 import genericLib.Utilitymethods;
@@ -39,7 +39,6 @@ public class CategoryPage extends CategoryModuleTest{
 	@FindBy(xpath="//input[@placeholder='search Category']")
 	private WebElement SearchCategoryField;
 	
-	
 	@FindBy(xpath="//input[@ng-model='aic.addItem.hsnCode']")
 	private WebElement HSNcodeField;
 	
@@ -48,6 +47,22 @@ public class CategoryPage extends CategoryModuleTest{
 	
 	@FindBy(xpath="//input[@ng-model='aic.addItem.lowStock']")
 	private WebElement LowStockQuantityField;
+	
+	@FindBy(xpath="//input[@placeholder='unit']")
+	private WebElement Unit;
+	
+	@FindBy(xpath="//label[contains(text(),'MRP')]/following-sibling::div/input")
+	private WebElement Mrp;
+	
+	@FindBy(xpath="//i[@class='fa fa-times']")
+	private WebElement NewItempageCloseIcon;
+	
+	
+	@FindBy(xpath="//button[text()='Add']")
+	private WebElement NewItemAdd;
+	
+	@FindBy(xpath="//div[text()='Item added Successfully']")
+	private WebElement AdditemSuccesstoostmessage;
 	
 	@FindBy(xpath="//button[text()='Add']")
 	private WebElement NewCategoryAddButton;
@@ -58,6 +73,7 @@ public class CategoryPage extends CategoryModuleTest{
 	
 	@FindBy(xpath="//div[text()='category added']")
 	private WebElement AddCategorySuccessBanner;
+	
 	
 	@FindBy(xpath=("//button[text()='Update']"))
 	private WebElement CategoryEditdialogUpdate;
@@ -113,23 +129,22 @@ public class CategoryPage extends CategoryModuleTest{
 	@FindBy(xpath="//button[text()='Add']")
 	private WebElement AddButtonInNewCategoryDialog;
 	
+	@FindBy(xpath="//b[contains(text(),'Item')]/following-sibling::a/i")
+	private WebElement ClosebuttonInItemPage;
 	
-	
-	
-	
-	public void CategoryPageAllElementVerification()
+	public boolean CategoryPageAllElementVerification()
 	{
 		Utilitymethods.isElementDisplayed(AddCategoryButton);
 		Utilitymethods.isElementDisplayed(AddItemButton);
 		Utilitymethods.isElementDisplayed(SearchCategoryBox);
 		Utilitymethods.isElementDisplayed(CategoryColumn);
 		Utilitymethods.isElementDisplayed(CATEGORYPageMarker);
-		
+		return true;
 	}
-	public void NewCategoryDialogAllElementVerification(String categoryName)
+	public boolean NewCategoryDialogAllElementVerification(String categoryName) throws Exception
 	{
 		Utilitymethods.elementclick(AddCategoryButton);
-		//Utilitymethods.waitForVisible(NewCategoryHeader);
+		Utilitymethods.waitForElementDisplayed(NewCategoryHeader);
 		Utilitymethods.isElementDisplayed(NewCategoryDialogboxCloser);
 		Utilitymethods.isElementDisplayed(CategoryNameLabel);
 		Utilitymethods.isElementDisplayed(CategoryNameField);
@@ -142,33 +157,33 @@ public class CategoryPage extends CategoryModuleTest{
 			}
 		}else 
 		{
-			AppLogger.logger.info("Add button is disabled when Category field is empty.");
-			Utilitymethods.enterText(CategoryNameField, categoryName);
-			Utilitymethods.isElementDisplayed(AddButtonInNewCategoryDialog);
+			AppLogger.logger.info("Add button is disabled when Category field is empty.");	
 		}
+		Utilitymethods.enterText(CategoryNameField, categoryName);
+		boolean status=AddButtonInNewCategoryDialog.isEnabled();
 		Utilitymethods.elementclick(NewCategoryDialogboxCloser);
-
+        return status;
 	}
-	public void AddcategoryFeature(String categoryName)
+	public boolean AddcategoryFeature(String categoryName)
 	{
 		Utilitymethods.elementclick(AddCategoryButton);
 		Utilitymethods.enterText(CategoryNameField,categoryName);
 		Utilitymethods.elementclick(NewCategoryAddButton);
-		Utilitymethods.isElementDisplayed(AddCategorySuccessBanner);
+		boolean status=Utilitymethods.isElementDisplayed(AddCategorySuccessBanner);
 		Utilitymethods.checkColor(SuccessBannerColour,"#51a351","Addcategory success banner");
-		//return AddCategorySuccessBanner.getText();
-		
+		return status;
 	}
-	public void  EditCategoryfeature(String EditCategoryname,String categoryName)
+	public boolean  EditCategoryfeature(String EditCategoryname,String categoryName)
 	{
 		Utilitymethods.elementclick(driver.findElement(By.xpath("//td[text()='"+EditCategoryname+"']/following-sibling::td/a/i[@class='fa fa-edit text-success']")));
 		Utilitymethods.isElementDisplayed(CategoryEditdialogUpdate);
 		Utilitymethods.enterText(CategoryNameField,categoryName);
 		CategoryEditdialogUpdate.click();
-		Utilitymethods.isElementDisplayed(UpdateSuccessBanner);
+		boolean status=Utilitymethods.isElementDisplayed(UpdateSuccessBanner);
 		Utilitymethods.checkColor(SuccessBannerColour,"#51a351", "Update Banner");
+		return status;
 	}
-	public void DeleteCategoryfeature(String categoryName)
+	public boolean CancelClickOnDeleteCategoryDilogueBox(String categoryName)
 	{
 		Utilitymethods.elementclick(driver.findElement(By.xpath("//td[text()='"+categoryName+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']")));
 		Utilitymethods.isElementDisplayed(DeleteConfirmHeader);
@@ -184,17 +199,29 @@ public class CategoryPage extends CategoryModuleTest{
 		{
 			AppLogger.logger.info("category deleted.");
 		}
-		driver.findElement(By.xpath("//td[text()='"+categoryName+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']")).click();
-		OKButton.click();
+		WebElement categorydelete=driver.findElement(By.xpath("//td[text()='"+categoryName+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']"));
+		Utilitymethods.elementclick(categorydelete);
+		Utilitymethods.waitForClickable(OKButton);
+		Utilitymethods.elementclick(OKButton);
 		AppLogger.logger.info("now category deleted");
 		Utilitymethods.isElementDisplayed(DeleteSuccessBanner);
 		Utilitymethods.checkColor(SuccessBannerColour,"#51a351", "Delete Banner");
+		return Utilitymethods.isElementDisplayed("//td[text()='"+categoryName+"']");
 	}
-	public void SearchCategory(String categoryname) throws Exception
+	public boolean DeleteCategoryfeature(String categoryName)
 	{
-		Utilitymethods.elementclick(AddCategoryButton);
-		Utilitymethods.enterText(CategoryNameField,categoryname);
-		Utilitymethods.elementclick(NewCategoryAddButton);
+		Utilitymethods.elementclick(driver.findElement(By.xpath("//td[text()='"+categoryName+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']")));
+		Utilitymethods.isElementDisplayed(DeleteConfirmHeader);
+		Utilitymethods.isElementDisplayed(Deletedialogboxmessage);
+		Utilitymethods.isElementDisplayed(CATEGORYPageMarker);
+		Utilitymethods.elementclick(OKButton);
+		AppLogger.logger.info("now category deleted");
+		Utilitymethods.isElementDisplayed(DeleteSuccessBanner);
+		Utilitymethods.checkColor(SuccessBannerColour,"#51a351", "Delete Banner");
+		return Utilitymethods.isElementDisplayed("//td[text()='"+categoryName+"']");
+	}
+	public boolean SearchCategory(String categoryname) throws Exception
+	{
 		Utilitymethods.enterText(SearchButtonCategoryPage,categoryname);
 		if(driver.findElement(By.xpath("//td[text()='"+categoryname+"']")).isDisplayed())
 		{
@@ -204,7 +231,8 @@ public class CategoryPage extends CategoryModuleTest{
 		{
 			AppLogger.logger.info("Category not dispalyed in category table");
 		}
-		driver.findElement(By.xpath("//td[text()='"+categoryname+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']")).click();
+		WebElement category=driver.findElement(By.xpath("//td[text()='"+categoryname+"']/following-sibling::td/a/i[@class='fa fa-trash text-danger']"));
+		Utilitymethods.elementclick(category);
 		Utilitymethods.elementclick(OKButton);
 		Utilitymethods.DelayBy(2);
 		Utilitymethods.enterText(SearchButtonCategoryPage,categoryname);
@@ -216,8 +244,9 @@ public class CategoryPage extends CategoryModuleTest{
 		{
 			AppLogger.logger.info("Category deleted successfully");
 		}
+		return true;
 	}
-	public void VerifyAddItemFeature()
+	public boolean VerifyAddItemFeature()
 	{
 		Utilitymethods.elementclick(AddItemButton);
 		Utilitymethods.isElementDisplayed(NewItemdialogbox);
@@ -226,17 +255,64 @@ public class CategoryPage extends CategoryModuleTest{
 		Utilitymethods.isElementDisplayed(HSNcodeField);
 		Utilitymethods.isElementDisplayed(GstField);
 		Utilitymethods.isElementDisplayed(LowStockQuantityField);
+		Utilitymethods.isElementDisplayed(Unit);
+		Utilitymethods.isElementDisplayed(Mrp);
+		Utilitymethods.elementclick(NewItempageCloseIcon); 
+		return true;
 		
 	}
-	public void VerifycategoryNewItempage(String categoryName)
+	public boolean VerifycategoryNewItempage(String categoryName) throws Exception
 	{
-		Utilitymethods.elementclick(AddCategoryButton);
-		Utilitymethods.enterText(CategoryNameField,categoryName);
-		Utilitymethods.elementclick(NewCategoryAddButton);
 		Utilitymethods.elementclick(AddItemButton);
 		Utilitymethods.enterText(SearchCategoryField,categoryName);
-		Utilitymethods.isElementDisplayed("//strong[text()='"+categoryName+"']");
-		
+		Utilitymethods.waitForElementDisplayed("//strong[text()='"+categoryName+"']");
+	    Utilitymethods.isElementDisplayed("//strong[text()='"+categoryName+"']");
+	    Utilitymethods.elementclick(NewItempageCloseIcon);
+	    return true;
+	}
+	public boolean AddItem(String itemname,String category,String hsncode,String lowstockQuantity,String unit,String mrp)
+	{
+		Utilitymethods.isElementDisplayed(AddItemButton);
+		Utilitymethods.elementclick(AddItemButton);
+		Utilitymethods.isElementDisplayed(NewItemdialogbox);
+		Utilitymethods.enterText(ItemNameField,itemname);
+		Utilitymethods.enterText(SearchCategoryField,category);
+		Utilitymethods.isElementDisplayed("//strong[text()='"+category+"']");
+		WebElement NewItemcategory=driver.findElement(By.xpath("//a[@title='"+category+"']"));
+		Utilitymethods.elementclick(NewItemcategory);
+		Utilitymethods.enterText(HSNcodeField,hsncode);
+		Utilitymethods.isElementDisplayed(GstField);
+		Select sel=new Select(GstField);
+		sel.selectByValue("3 %");
+		Utilitymethods.enterText(LowStockQuantityField, lowstockQuantity);
+		Utilitymethods.enterText(Unit, unit);
+		Utilitymethods.enterText(Mrp, mrp);
+		Utilitymethods.waitForClickable(NewItemAdd);
+		Utilitymethods.elementclick(NewItemAdd);
+		Utilitymethods.isElementDisplayed(AdditemSuccesstoostmessage);
+		return Utilitymethods.isElementDisplayed(AdditemSuccesstoostmessage);
+	}
+	public boolean VerifyItemList(String Category,String itemname,String HSNCode,String GSTRate,String LowstockQuantity,String MRP,String Action)
+	{
+		WebElement itemlist=driver.findElement(By.xpath("//td[text()='"+Category+"']/following-sibling::td[1]/button/span[text()='Item List']"));
+		Utilitymethods.waitForClickable(itemlist);
+		Utilitymethods.elementclick(itemlist);
+		if(Utilitymethods.isElementDisplayed("//b[contains(text(),'Item List')]/span[text()='"+Category+"']"));
+		AppLogger.logger.info("Item displayed inside correct category");
+		if(Utilitymethods.isElementDisplayed("//tr[th[text()='Name']]/following-sibling::tr/td[1]/span[text()='"+itemname+"']"));
+		AppLogger.logger.info("Correct Item Name displayed ");
+		if(Utilitymethods.isElementDisplayed("//tr[th[text()='HSN Code']]/following-sibling::tr/td[2]/span[text()='"+HSNCode+"']"));
+		AppLogger.logger.info("Correct HSN code displayed ");
+		if(Utilitymethods.isElementDisplayed("//tr[th[text()='GST Rate']]/following-sibling::tr/td[3]/span[text()='"+GSTRate+"']"));
+		AppLogger.logger.info("Correct GST Rate displayed");
+		if(Utilitymethods.isElementDisplayed("//tr[th[text()='Low stock Quantity']]/following-sibling::tr/td[4]/span[text()='"+LowstockQuantity+"']"));
+		AppLogger.logger.info("Correct LowstockQuantity  displayed");
+		if(Utilitymethods.isElementDisplayed("//tr[th[text()='MRP']]/following-sibling::tr/td[5]/span[text()='"+MRP+"']"));
+		AppLogger.logger.info("Correct MRP  displayed");
+		if(Utilitymethods.isElementDisplayed("//tr[th[text()='Action']]/following-sibling::tr/td[6]/span[text()='"+Action+"']"));
+		AppLogger.logger.info("Correct Action displayed");
+		Utilitymethods.elementclick(ClosebuttonInItemPage);
+		return true;
 	}
 	}
 	
